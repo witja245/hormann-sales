@@ -19,7 +19,7 @@ function p($arr)
 }
 
 define('VUEJS_DEBUG', true);
-define('DEFAULT_TEMPLATE_MAIN_PATH','/local/templates/mainNew');
+define('DEFAULT_TEMPLATE_MAIN_PATH','/local/templates/hormannSales');
 
 
 
