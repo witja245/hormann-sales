@@ -1,0 +1,459 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/kontakty/")
+					span(itemprop="name") Контакты
+				meta(itemprop="position" content="2")
+	h1.h2.wow(data-wow-offset="200")
+		| Hoermann в
+		a.contacts-city(href="#modal-contacts" data-fancybox) Санкт-Петербурге
+	.official.wow(data-wow-offset="200")
+		.official__row
+			.official__col
+				a.official__item.js-goto(href="#dealers")
+					.official__item__image
+						img(src="./images/temp/104.jpg" alt="")
+					.official__item__content
+						.title-text Покупка, установка и сервис
+						.text Официальные дилеры Hoermann в вашем городе
+			.official__col
+				a.official__item.js-goto(href="#representation")
+					.official__item__image
+						img(src="./images/temp/105.jpg" alt="")
+					.official__item__content
+						.title-text Сотрудничество для юрлиц
+						.text Официальное представительство в вашем городе
+	form.contacts.wow#representation(data-wow-offset="200" action="#" data-app="contacts")
+		.title-text.wow(data-wow-offset="200")
+			| Официальное представительство ООО «Хёрманн Руссия» в Санкт-Петербурге
+		.form__radio
+			button.is-active(type="button") Все
+			label
+				input(type="checkbox" value="type-1")
+				i
+				span Бизнесу
+			label
+				input(type="checkbox" value="type-2")
+				i
+				span Архитекторам
+			label
+				input(type="checkbox" value="type-3")
+				i
+				span Сервис
+		.contacts__box
+			.contacts__list
+				.contacts__list__scroll
+					.contacts__list__content
+						.contacts__item(data-lat="44.5022" data-lng="34.1513" data-types=['type-1'])
+							.contacts__item__name
+								| Санкт-Петербург, пос. Шушары,
+								br
+								| отд. Бадаевское, д. 5, лит. А
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__adress.contacts__item__adress_margin
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:info＠hoermann.ru") info＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Архитекторам
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-25") +7 (812) 702-44-25
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:architektenberatung＠hoermann.ru") architektenberatung＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Дилерский отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:dil＠hoermann.ru") dil＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Технический отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:to＠hoermann.ru") to＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Отдел по работе с юр.лицами
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Консультация по продукции
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+						.contacts__item(data-lat="44.5035" data-lng="34.1581" data-types=['type-2'])
+							.contacts__item__name
+								| Санкт-Петербург2, пос. Шушары,
+								br
+								| отд. Бадаевское, д. 5, лит. А
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__adress.contacts__item__adress_margin
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:info＠hoermann.ru") info＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Архитекторам
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-25") +7 (812) 702-44-25
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:architektenberatung＠hoermann.ru") architektenberatung＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Дилерский отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:dil＠hoermann.ru") dil＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Технический отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:to＠hoermann.ru") to＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Отдел по работе с юр.лицами
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Консультация по продукции
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+						.contacts__item(data-lat="44.5010" data-lng="34.1564" data-types=['type-3'])
+							.contacts__item__name
+								| Санкт-Петербург3, пос. Шушары,
+								br
+								| отд. Бадаевское, д. 5, лит. А
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__adress.contacts__item__adress_margin
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:info＠hoermann.ru") info＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Архитекторам
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:architektenberatung＠hoermann.ru") architektenberatung＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Дилерский отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:dil＠hoermann.ru") dil＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Технический отдел
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:to＠hoermann.ru") to＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Отдел по работе с юр.лицами
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+							.contacts__item__adress
+								.contacts__item__adress__title Консультация по продукции
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+									li
+										.contacts__item__adress__label Email:
+										a(href="mailto:ur＠hoermann.ru") ur＠hoermann.ru
+			.contacts__map#map(data-lat="44.504565" data-lng="34.148387" data-zoom="18" data-icon="./images/map-pin.svg" data-icon-active="./images/map-pin-active.svg")
+	form.contacts.wow#dealers(data-wow-offset="200" action="#" data-app="contacts")
+		.title-text.wow(data-wow-offset="200")
+			| Дилеры Hoermann в городе Санкт-Петербург
+		.form__radio
+			button.is-active(type="button") Все
+			label
+				input(type="checkbox" value="type-1")
+				i
+				span Продажа
+			label
+				input(type="checkbox" value="type-2")
+				i
+				span Выставочный зал
+			label
+				input(type="checkbox" value="type-3")
+				i
+				span Бизнесу
+			label
+				input(type="checkbox" value="type-3")
+				i
+				span Архитекторам
+			label
+				input(type="checkbox" value="type-3")
+				i
+				span Сервис
+		.contacts__box
+			.contacts__list
+				.contacts__list__scroll
+					.contacts__list__content
+						.contacts__item(data-lat="44.5022" data-lng="34.1513" data-types=['type-1'])
+							.contacts__item__name
+								| #[span г. Пушкин, Октябрьский б-р, д.50/30] Официальный дистрибьютор ООО «Торман»
+							.contacts__item__type
+								span Продажа
+								span Сервис
+								span Архитекторам
+								span Бизнесу
+								span Выставочный зал
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__adress
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										span
+											a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+											br
+											a(href="tel:+7 (981) 754-86-36") +7 (981) 754-86-36
+						.contacts__item(data-lat="44.5035" data-lng="34.1581" data-types=['type-2'])
+							.contacts__item__name
+								| #[span г. Всеволжск, Колтушское ш., д. 184] Официальный дистрибьютор ООО «Торман»
+							.contacts__item__type
+								span Продажа
+								span Архитекторам
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__image
+								a(href="./images/temp/106.jpg" data-fancybox="photo")
+									img(src="./images/temp/106.jpg" alt="")
+								a(href="./images/temp/106.jpg" data-fancybox="photo")
+									img(src="./images/temp/106.jpg" alt="")
+						.contacts__item(data-lat="44.5010" data-lng="34.1564" data-types=['type-3'])
+							.contacts__item__name
+								| #[span г. Пушкин, Октябрьский б-р, д.50/30] Официальный дистрибьютор ООО «Торман»
+							.contacts__item__type
+								span Продажа
+								span Сервис
+								span Архитекторам
+								span Бизнесу
+								span Выставочный зал
+							.contacts__item__plan
+								a(href="#")
+									+svg('pin2')
+									span 1975 км от вас
+								a(href="#")
+									+svg('plan')
+									span Схема проезда
+							.contacts__item__adress
+								ul
+									li
+										.contacts__item__adress__label Телефон:
+										span
+											a(href="tel:+7 (812) 702-44-22") +7 (812) 702-44-22
+											br
+											a(href="tel:+7 (981) 754-86-36") +7 (981) 754-86-36
+			.contacts__map#map2(data-lat="44.504565" data-lng="34.148387" data-zoom="18" data-icon="./images/map-pin.svg" data-icon-active="./images/map-pin-active.svg")
+	.hotline.wow(data-wow-offset="200")
+		.hotline__content
+			.hotline__item
+				.hotline__title
+					| Многоканальная горячая линия
+				.hotline__number
+					a(href="tel:8 800 555 69 87") 8 800 555 69 87
+				.hotline__date
+					| Пн–Пт с 10:00 до 18:00
+			.hotline__item
+				a.btn(href="#")
+					span Задать вопрос
+				.hotline__email
+					a(href="mailto:info＠hoermann.ru") info＠hoermann.ru
+		.hotline__image
+			img(src="./images/temp/107.jpg" alt="")
+.hidden
+	.modal.modal-contacts#modal-contacts
+		.h2 Выберите город
+		.modal__row
+			.modal__col
+				.modal__list
+					ul
+						li: a(href="#") Москва
+						li: a(href="#") Санкт-Петербу
+					ul
+						li: a(href="#") Абакан
+						li: a(href="#") Анадырь
+						li: a(href="#") Архангельск
+						li: a(href="#") Астрахань
+						li: a(href="#") Барнаул
+						li: a(href="#") Белгород
+						li: a(href="#") Биробиджан
+						li: a(href="#") Благовещенск
+						li: a(href="#") Брянск
+						li: a(href="#") Владивосток
+						li: a(href="#") Владикавказ
+						li: a(href="#") Владимир
+						li: a(href="#") Волгоград
+						li: a(href="#") Вологда
+			.modal__col
+				.modal__list
+					ul
+						li: a(href="#") Воронеж
+						li: a(href="#") Горно-Алтайск
+						li: a(href="#") Грозный
+						li: a(href="#") Дудинка
+						li: a(href="#") Екатеринбург
+						li: a(href="#") Иваново
+						li: a(href="#") Ижевск
+						li: a(href="#") Иркутск
+						li: a(href="#") Йошкар-Ола
+						li: a(href="#") Казань
+						li: a(href="#") Калининград
+						li: a(href="#") Калуга
+						li: a(href="#") Кемерово
+						li: a(href="#") Киров
+						li: a(href="#") Кострома
+						li: a(href="#") Краснодар
+						li: a(href="#") Красноярск
+			.modal__col
+				.modal__list
+					ul
+						li: a(href="#") Курск
+						li: a(href="#") Кызыл
+						li: a(href="#") Липецк
+						li: a(href="#") Магадан
+						li: a(href="#") Майкоп
+						li: a(href="#") Махачкала
+						li: a(href="#") Мурманск
+						li: a(href="#") Назрань
+						li: a(href="#") Нальчик
+						li: a(href="#") Нарьян-Мар
+						li: a(href="#") Нижний Новгород
+						li: a(href="#") Новгород
+						li: a(href="#") Новосибирск
+						li: a(href="#") Омск
+						li: a(href="#") Орел
+						li: a(href="#") Оренбург
+						li: a(href="#") Пенза
+			.modal__col
+				.modal__list
+					ul
+						li: a(href="#") Пермь
+						li: a(href="#") Петрозаводск
+						li: a(href="#") Псков
+						li: a(href="#") Ростов-на-Дону
+						li: a(href="#") Рязань
+						li: a(href="#") Салехард
+						li: a(href="#") Самара
+						li: a(href="#") Саранск
+						li: a(href="#") Саратов
+						li: a(href="#") Смоленск
+						li: a(href="#") Ставрополь
+						li: a(href="#") Сыктывкар
+						li: a(href="#") Тамбов
+						li: a(href="#") Тверь
+						li: a(href="#") Томск
+						li: a(href="#") Тула
+						li: a(href="#") Тюмень
+			.modal__col
+				.modal__list
+					ul
+						li: a(href="#") Улан-Удэ
+						li: a(href="#") Ульяновск
+						li: a(href="#") Уфа
+						li: a(href="#") Хабаровск
+						li: a(href="#") Ханты-Мансийск
+						li: a(href="#") Чебоксары
+						li: a(href="#") Челябинск
+						li: a(href="#") Черкесск
+						li: a(href="#") Чита
+						li: a(href="#") Элиста
+						li: a(href="#") Южно-Сахалинск
+						li: a(href="#") Якутск
+						li: a(href="#") Ярославль

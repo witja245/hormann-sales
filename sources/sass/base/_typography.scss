@@ -1,0 +1,53 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 100% / 1.2 $text-font-stack;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-style: normal;
+  font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+	-moz-font-feature-settings: 'lnum';
+	-webkit-font-feature-settings: 'lnum';
+	font-feature-settings: 'lnum' on;
+}
+
+.h1 {
+  @include RobotoL;
+  @include font($text-color, 46px, 44px);
+}
+
+h2, .h2 {
+  @include RobotoCondL;
+  @include font($text-color, 42px, 40px);
+  margin: 24px 0;
+}
+
+h3, .h3 {
+  @include RobotoCondL;
+  @include font($text-color, 30px, 32px);
+  margin: 0 0 16px 0;
+}
+
+h4, .h4 {
+  @include RobotoCondB;
+  @include font($text-color, 18px, normal);
+  margin: 0 0 16px 0;
+}
+
+.is-text {
+  @include RobotoL;
+  @include font($text-color, 16px, 24px);
+  margin: 16px 0;
+}
+
+.is-lead-text {
+  @include RobotoL;
+  @include font($text-color, 18px, normal);
+  margin: 16px 0;
+}

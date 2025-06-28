@@ -1,0 +1,152 @@
+.story {
+	margin-bottom: 56px;
+	padding: 40px 0;
+	background: $color-whisper;
+
+	h2 {
+		@media (max-width: $sm - 1) {
+			margin: 0 0 32px;
+		}
+	}
+
+	.slider {
+		margin-bottom: 56px;
+		color: $color-shuttle-gray;
+
+		.swiper-slide {
+			@media (max-width: $sm - 1) {
+				width: 251px;
+			}
+		}
+
+		&__item {
+			&__text {
+				font-size: 14px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			margin-bottom: 97px;
+		}
+	}
+
+	&__tabs {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__list {
+			margin-bottom: 32px;
+			font-size: 18px;
+
+			ul {
+				display: flex;
+				border-bottom: 1px solid $color-alto;
+
+				li {
+					+ li {
+						margin-left: 32px;
+					}
+
+					a {
+						display: block;
+						border-bottom: 1px solid transparent;
+						padding-bottom: 14px;
+
+						&.is-active {
+							border-color: $color-regal-blue;
+							color: $color-regal-blue;
+						}
+					}
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin-bottom: 38px;
+			}
+		}
+
+		&__item {
+			display: none;
+
+			&.is-active {
+				display: block;
+				animation: story-show $animation-speed * 2;
+			}
+		}
+
+		&__image {
+			order: -1;
+			margin: 0 0 32px;
+
+			img {
+				width: 100%;
+
+				@media (min-width: $sm) {
+					width: 800px;
+				}
+			}
+
+			@media (min-width: $sm) {
+				order: 0;
+				flex-shrink: 0;
+				margin: 0 0 0 32px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.swiper-slide {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .swiper-slide {
+				transition-delay: 0.5s;
+
+				+ .swiper-slide {
+					transition-delay: 0.65s;
+
+					+ .swiper-slide {
+						transition-delay: 0.75s;
+
+						+ .swiper-slide {
+							transition-delay: 0.85s;
+						}
+					}
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.swiper-slide {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+		padding: 136px 0;
+	}
+}
+
+@keyframes story-show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

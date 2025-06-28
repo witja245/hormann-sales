@@ -1,0 +1,17 @@
+.page-not-found {
+	padding-top: 145px;
+	margin-bottom: -120px;
+	background: url("../images/temp/74.jpg");
+	background-size: cover;
+	width: 100vw;
+	min-height: 828px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	.page-not-found-txt {
+		p {
+			width: 350px;
+			margin-bottom: 48px;
+		}
+	}
+}

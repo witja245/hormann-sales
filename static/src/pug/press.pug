@@ -1,0 +1,55 @@
+.upper(style="background-image:url(./images/temp/77.jpg)")
+	.container
+		.breadcrumbs
+			ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					a(itemprop="item" href="#")
+						span(itemprop="name") Главная
+					meta(itemprop="position" content="1")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/presse/")
+						span(itemprop="name") Прессе
+					meta(itemprop="position" content="2")
+.container
+	h1.h2.wow(data-wow-offset='200') Прессе
+	.text.width-605.margin-16.wow(data-wow-offset='200')
+		| У Вас есть вопросы или Вы хотите выразить Ваше мнение или пожелания по публикации той или иной информации/фотографий?
+		br
+		br
+		| Свяжитесь, пожалуйста, с нами:
+	.text.margin-120.wow(data-wow-offset='200')
+		| ООО "Хёрманн Руссия"
+		br
+		| 196626 Санкт-Петербург
+		br
+		| пос. Шушары
+		br
+		| Отд. Бадаевское, д. 5а
+		br
+		br
+		| Teл.: #[a(href="tel:+7 (812) 702-44-22]") +7 (812) 702-44-22]
+		br
+		| факс: #[a(href="tel:+7 (812) 702-44-23]") +7 (812) 702-44-23]
+		br
+		| E-mail: #[a(href="mailto:infohormann.com") infohormann.com]
+	.press.wow(data-wow-offset='200')
+		.press__item
+			.title-text Скачайте пресс-кит о компании
+			a.press__file(href="#" download)
+				.press__file__icon
+					+svg('pdf')
+				.press__file__content
+					.press__file__title
+						| Полный пресс-кит
+					.press__file__text
+						| (PDF, 1 Мб)
+			a.press__file(href="#" download)
+				.press__file__icon
+					+svg('zip')
+				.press__file__content
+					.press__file__title
+						| Пресс-кит с фото и видеоматериалами
+					.press__file__text
+						| (PDF, 1 Мб)
+		a.press__item(href="#")
+			.title-text Новости и пресс-релизы

@@ -1,0 +1,102 @@
+.press {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		padding: 30px;
+		width: 100%;
+		background: $color-whisper;
+
+		& + & {
+			margin: 30px 0 0;
+
+			@media (min-width: $sm) {
+				margin: 0 0 0 70px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			width: auto;
+		}
+	}
+
+	&__file {
+		display: flex;
+
+		&__icon {
+			flex-shrink: 0;
+			margin-right: 8px;
+
+			svg {
+				display: block;
+				width: 27px;
+				height: 28px;
+				fill: none;
+			}
+		}
+
+		&__title {
+			color: $color-regal-blue;
+		}
+
+		&__text {
+			color: $color-rolling-stone;
+		}
+
+		& + & {
+			margin-top: 20px;
+		}
+
+		&:hover {
+			.press__file__title {
+				color: $color-midnight-blue;
+			}
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.press__item {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .press__item{
+				transition-delay: 0.5s;
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.press__item {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+	}
+}
+
+a.press__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-white;
+	background: $color-rolling-stone;
+	transition: $animation-speed;
+
+	.title-text {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		background: $color-regal-blue;
+	}
+}

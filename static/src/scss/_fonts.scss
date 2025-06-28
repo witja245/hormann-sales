@@ -1,0 +1,43 @@
+// stylelint-disable no-empty-source
+
+@font-face {
+	src: url("../fonts/RobotoCond/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/RobotoCond/RobotoCondensed-Light.woff") format("woff");
+	font-family: "Roboto Condensed";
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	src: url("../fonts/RobotoCond/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCond/RobotoCondensed-Bold.woff") format("woff");
+	font-family: "Roboto Condensed";
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+//@font-face {
+//	src: url("../fonts/Roboto/subset-Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/subset-Roboto-Light.woff") format("woff");
+//	font-family: "Roboto";
+//	font-weight: 300;
+//	font-style: normal;
+//	font-display: swap;
+//}
+//
+//@font-face {
+//	src: url("../fonts/Roboto/subset-Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/subset-Roboto-Medium.woff") format("woff");
+//	font-family: "Roboto";
+//	font-weight: 500;
+//	font-style: normal;
+//	font-display: swap;
+//}
+//
+//@font-face {
+//	src: url("../fonts/Roboto/subset-Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/subset-Roboto-Bold.woff") format("woff");
+//	font-family: "Roboto";
+//	font-weight: 700;
+//	font-style: normal;
+//	font-display: swap;
+//}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');

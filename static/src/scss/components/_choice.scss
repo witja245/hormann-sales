@@ -1,0 +1,288 @@
+.choice {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 120px;
+
+	&__list {
+		width: 100%;
+		background: $color-regal-blue;
+
+		&__menu {
+			position: relative;
+			margin: 24px;
+			background: $color-white;
+
+			&__btn {
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 5;
+				border: none;
+				padding: 0;
+				width: 52px;
+				height: 52px;
+				background: transparent;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -1px;
+					border-right: 1px solid $color-mine-shaft;
+					border-bottom: 1px solid $color-mine-shaft;
+					width: 7px;
+					height: 7px;
+					transform: translate3d(-50%, -50%, 0) rotate(45deg);
+					transition: $animation-speed;
+				}
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+
+				li {
+					a {
+						display: none;
+						padding: 14px 48px 14px 16px;
+
+						&.is-active-mob {
+							display: block;
+							color: $color-mine-shaft;
+						}
+
+						&.is-active-item {
+							order: -1;
+						}
+					}
+				}
+			}
+
+			&.is-active-menu {
+				.choice__list__menu__btn {
+					&::before {
+						margin-left: -3px;
+						transform: rotate(225deg);
+					}
+				}
+
+				ul {
+					li {
+						a {
+							display: block;
+						}
+					}
+				}
+			}
+
+			@media (min-width: $sm) {
+				display: none;
+			}
+		}
+
+		@media (min-width: $sm) {
+			//height: 585px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: none;
+		padding: 0 24px 32px;
+		color: $color-white;
+		background: $color-regal-blue;
+		transition: $animation-speed;
+		cursor: pointer;
+
+		.subtext {
+			margin-bottom: 5px;
+
+			@media (max-width: $sm - 1) {
+				display: none;
+			}
+		}
+
+		&__text {
+			margin-bottom: 16px;
+			font-size: 18px;
+			line-height: 24px;
+
+			@media (min-width: $sm) {
+				margin-bottom: 0;
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+
+		&__drop {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				display: block;
+				font-size: 14px;
+				line-height: 14px;
+
+				@media (max-width: $sm - 1) {
+					color: $color-white;
+				}
+			}
+
+			a + a {
+				margin-top: 8px;
+			}
+
+			@media (min-width: $sm) {
+				display: none;
+				margin-top: 20px;
+
+				.is-active & {
+					display: block;
+				}
+			}
+		}
+
+		&:hover {
+			color: $color-sun;
+		}
+
+		&.is-active-mob {
+			display: block;
+		}
+
+		&.is-active {
+			display: block;
+			margin-top: -1px;
+			padding-top: 27px;
+			color: $color-mine-shaft;
+			background: $color-sun;
+
+			&::before {
+				background: $color-sun;
+			}
+		}
+
+		@media (min-width: $sm) {
+			display: block;
+			padding: 26px 32px 40px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				width: 216px;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.5);
+			}
+
+			&:last-child {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__image {
+		position: relative;
+		flex-shrink: 0;
+		order: -1;
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: 298px;
+			object-fit: cover;
+
+			@media (min-width: $sm) {
+				width: 936px;
+				height: 100%;
+			}
+		}
+
+		&__pin {
+			position: absolute;
+
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				border-radius: 50%;
+				padding: 0;
+				width: 23px;
+				height: 23px;
+				font-size: 12px;
+				color: $color-black;
+				background: $color-sun;
+			}
+
+			@media (max-width: $sm - 1) {
+				display: none;
+			}
+		}
+
+		&__info {
+			position: absolute;
+			left: 40px;
+			top: -16px;
+			z-index: 10;
+			padding: 16px 24px;
+			width: 210px;
+			background: rgba($color-white, 0.95);
+			opacity: 0;
+			visibility: hidden;
+			transition: $animation-speed;
+
+			.subtext {
+				margin-bottom: 8px;
+			}
+
+			a {
+				display: block;
+				font-size: 12px;
+				line-height: 18px;
+			}
+
+			.is-active & {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		@media (min-width: $sm) {
+			order: 0;
+			width: auto;
+		}
+	}
+
+	&__list,
+	&__image {
+		.wow & {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 5;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				transition: 1.5s;
+			}
+		}
+
+		.wow.animated & {
+			&::before {
+				width: 0;
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+	}
+}

@@ -1,0 +1,90 @@
+.roll {
+	margin-bottom: 24px;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+	}
+
+	&__col {
+		margin-bottom: 32px;
+		padding: 0 16px;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			width: 33.33334%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+		height: 213px;
+		overflow: hidden;
+
+		&__image {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: 50% 50% no-repeat;
+			background-size: cover;
+			transition: $animation-speed * 3;
+		}
+
+		.title-text {
+			margin: auto 0 0;
+			font-size: 24px;
+			line-height: 28px;
+			color: $color-white;
+		}
+
+		&:hover {
+			.roll__item__image {
+				transform: scale(1.2);
+			}
+		}
+
+		@media (min-width: $sm) {
+			height: 244px;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.roll__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .roll__col {
+				transition-delay: 0.5s;
+
+				+ .roll__col {
+					transition-delay: 0.65s;
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.roll__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 88px;
+	}
+}

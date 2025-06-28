@@ -1,0 +1,75 @@
+.but {
+	margin-bottom: 26px;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (min-width: $sm) {
+			margin: 0 -40px;
+		}
+	}
+
+	&__col {
+		margin-bottom: 30px;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			margin-bottom: 50px;
+			padding: 0 72px;
+			width: 50%;
+		}
+	}
+
+	&__item {
+		&__image {
+			margin-bottom: 20px;
+		}
+
+		.title-text {
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.but__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .but__col {
+				transition-delay: 0.5s;
+
+				+ .but__col {
+					transition-delay: 0.65s;
+
+					+ .but__col {
+						transition-delay: 0.75s;
+
+						+ .but__col {
+							transition-delay: 0.85s;
+						}
+					}
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.but__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 70px;
+	}
+}

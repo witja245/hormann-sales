@@ -1,0 +1,158 @@
+.upper.state-faded(style="background-image:url(./images/temp/101.jpg)")
+	.upper__inner
+		.upper__inner-item.is-services-header.wow(data-wow-offset='200')
+			h1 Сервис
+			.sh-preview Оцените обслуживание высочайшего уровня от компании Hörmann
+			.sh-br
+			.sh-phone-caption Телефон сервисной службы
+			.sh-phone-number: a(href="tel:88005556987") 8-800-5556-987
+			.sh-phone-work Каждый день с 10:00 до 20:00
+
+.container.container_width-1038
+	.edge.wow(data-app="edge" data-wow-offset="200")
+		.edge__box
+			.edge__content
+				.text
+					| Мы постоянно совершенствуем систему сервиса, делая её более удобной и доступной. Ежегодно мы открываем новые филиалы, чтобы быть ближе, вводим новые услуги, совершенствуем процессы, чтобы быть оперативнее.
+					br
+					br
+					| Многоступенчатая система обучения специалистов в сервисных центрах Германии, полный объём регулярно обновляющейся информации по ремонту и обслуживанию в сочетании с накопленным опытом обеспечивает высочайший уровень квалификации и позволяет находить эффективные решения задач любой сложности.
+					br
+					br
+					| На региональных складах "Хёрманн Руссия" представлен широкий спектр запасных частей, что позволяет значительно сократить сроки ремонта.
+					| Оцените сервисное обслуживание высочайшего уровня от компании Hörmann.
+			.edge__slider
+				.edge__number
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.subtext
+									| 01
+							.swiper-slide
+								.subtext
+									| 02
+							.swiper-slide
+								.subtext
+									| 03
+				.edge__inner
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+
+.is-top-line
+.is-service-slider(data-app="service-slider")
+	h2.wow(data-wow-offset='200') Запасные части
+	.ss-layout.wow(data-wow-offset='200')
+		.ss-layout-left
+			| На региональных складах «Хёрманн Руссия» представлен широкий спектр запасных частей, что позволяет значительно сократить сроки ремонта. Вы получите выгодные условия на запчасти, вне зависимости от производителя изделия.
+		.ss-layout-right
+			.swiper-container
+				.swiper-wrapper
+					each val in [1,2,3,4,5,6,7,8,9,10]
+						.swiper-slide
+							a.ss-card(href="#")
+								.ss-card-image(style="background-image:url(./images/temp/97.jpg)")
+								.ss-card-name
+								| Скоростные ворота
+								br
+								| (PDF, 1.44Mb)
+
+
+
+
+.container
+	form.form.wow(data-wow-offset='200' action="./ajax/test.json" method="get" data-app="form")
+		.form__box
+			.title-text
+				a(href="#") Свяжитесь с нами
+			.form__row.form__row_width-33
+				.form__col
+					.form__input
+						.form__label
+							| Ваше имя
+						.form__field
+							input(type="text" name="name" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Компания
+						.form__field
+							input(type="text" name="text" data-validation={
+								maxlength: 300
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Город
+						.form__field
+							input(type="text" name="city" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Телефон
+						.form__field
+							input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__col
+					.form__input
+						.form__label
+							| Email
+						.form__field
+							input(type="email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Сайт компании (если есть)
+						.form__field
+							input(type="text" name="site" data-validation={
+								maxlength: 300
+							} required)
+			.form__input
+				.form__label
+					| Сообщение
+				.form__field
+					textarea(name="subject" data-validation={
+						maxlength: 2000,
+					} required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

@@ -1,0 +1,224 @@
+.banner {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 56px;
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 32px 32px 48px;
+		color: $color-white;
+		background: radial-gradient(100% 100% at 100% 50%, #004CA3 0%, $color-regal-blue 100%), $color-regal-blue;
+
+		@media (min-width: $sm) {
+			padding: 56px 128px 64px 64px;
+		}
+	}
+
+	&__action {
+		align-self: flex-start;
+		border-radius: 12px;
+		padding: 4px 11px;
+		font-family: $font-family-roboto-condensed;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+		color: $color-mine-shaft;
+		background: $color-sun;
+
+		@media (max-width: $sm - 1) {
+			position: absolute;
+			top: -11px;
+			z-index: 10;
+
+			.wow & {
+				opacity: 0;
+				transform: translateY(35px);
+				transition: 1s;
+			}
+
+			.wow.animated & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	.title-text {
+		margin: 0 0 24px;
+
+		span {
+			font-weight: 700;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: $sm) {
+			margin: auto 0 24px;
+			transition: $animation-speed;
+		}
+	}
+
+	&__text {
+		@media (max-width: $sm - 1) {
+			.wow & {
+				opacity: 0;
+				transform: translateY(35px);
+				transition: 1s;
+			}
+
+			.wow.animated & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__image {
+		position: relative;
+		order: -1;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			@media (max-width: $sm - 1) {
+				transition: 1.5s;
+			}
+
+			@media (min-width: $sm) {
+				width: 504px;
+			}
+		}
+
+		&__price {
+			position: absolute;
+			right: 24px;
+			top: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 71px;
+			height: 71px;
+			font-family: $font-family-roboto-condensed;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: -1px;
+			color: $color-white;
+			background: $color-sun;
+		}
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			order: 0;
+		}
+	}
+
+	&__image {
+		img {
+			@media (max-width: $sm - 1) {
+				.wow & {
+					transform: scale(1.2);
+				}
+
+				.wow.animated & {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	&__content,
+	&__image {
+		@media (min-width: $sm) {
+			.wow & {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: 5;
+					width: 100%;
+					height: 100%;
+					background: #fff;
+					transition: 1.5s;
+				}
+			}
+
+			.wow.animated & {
+				&::before {
+					width: 0;
+				}
+			}
+		}
+	}
+
+
+	&:hover {
+		.title-text {
+			color: $color-sun;
+		}
+	}
+
+	@media (max-width: $sm - 1) {
+		&.wow {
+			.title-text {
+				opacity: 0;
+				transform: translateY(35px);
+				transition: 1s;
+			}
+
+			&.animated  {
+				.title-text {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+		margin: 0 auto 120px;
+		width: 1008px;
+	}
+}
+
+.banner_offer {
+	.banner__content {
+		color: $color-mine-shaft;
+		background: #f2f2f2;
+
+		@media (min-width: $sm) {
+			padding: 48px 80px 37px;
+		}
+	}
+
+	.banner__image {
+		img {
+			@media (max-width: $sm - 1) {
+				height: 267px;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.title-text {
+		margin-bottom: 16px;
+		font-weight: 700;
+
+		@media (min-width: $sm) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+}

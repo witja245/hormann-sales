@@ -1,0 +1,48 @@
+.breadcrumbs {
+	margin-bottom: 32px;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			position: relative;
+			margin-right: 20px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: -12px;
+				top: 50%;
+				border-top: 1px solid $color-mine-shaft;
+				border-left: 1px solid $color-mine-shaft;
+				width: 7px;
+				height: 7px;
+				transform: translateY(-50%) rotate(135deg);
+
+				@media (min-width: $sm) {
+					right: -16px;
+				}
+			}
+
+			&:last-child {
+				&::after {
+					display: none;
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin-right: 30px;
+			}
+		}
+
+		@media (max-width: $sm - 1) {
+			font-size: 14px;
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 80px;
+		font-size: 18px;
+	}
+}

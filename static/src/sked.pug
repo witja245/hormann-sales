@@ -1,0 +1,50 @@
+mixin svg(name)
+	svg&attributes(attributes)
+		use(xlink:href=`./images/sprites.svg#${name}`)
+
+.modal.modal-sked#sked
+	.h2 Название модели / группы ворот
+	.modal__row
+		.modal__left
+			.modal__slider(data-app="slider-sked")
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.modal__slider__img
+								img(src="./images/temp/43.jpg" alt="")
+						.swiper-slide
+							.modal__slider__img
+								img(src="./images/temp/44.jpg" alt="")
+						.swiper-slide
+							.modal__slider__img
+								img(src="./images/temp/45.jpg" alt="")
+				.modal__slider__pager
+				button.modal__slider__arrow.modal__slider__arrow_prev(type="button"): +svg('arrow')
+				button.modal__slider__arrow.modal__slider__arrow_next(type="button"): +svg('arrow')
+			.subtext Сферы применения:
+			.modal__list
+				ul
+					li Автосалон
+					li Склады
+					li Производственные предприятия
+					li Ремонтные боксы
+		.modal__right
+			.text
+				| По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+			.subtext Ключевые особенности
+			.modal__items
+				.modal__item
+					.modal__item__icon
+						+svg('accept')
+					.modal__item__text
+						| По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение
+				.modal__item
+					.modal__item__icon
+						+svg('accept')
+					.modal__item__text
+						| По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение
+				.modal__item
+					.modal__item__icon
+						+svg('accept')
+					.modal__item__text
+						| По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение

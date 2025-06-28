@@ -1,0 +1,375 @@
+main.page-index
+	.index-hero.wow
+		.index-hero__container(data-is='index-slider')
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.index-hero__item
+							.index-hero__image.swiper-lazy(data-background='./images/temp/34.jpg')
+							.index-hero__content-wrapper
+								.index-hero__content.wrapper.wrapper--md
+									.index-hero__content-inner
+										.b-label Официальный сайт
+										h1.h1.index-hero__title Крупнейший в Европе производитель гаражных ворот, дверей и приводов
+										p.index-hero__small-text с 1935 года
+						.swiper-lazy-preloader
+					.swiper-slide
+						.index-hero__item
+							.index-hero__image.swiper-lazy(data-background='./images/temp/33.jpg')
+							.index-hero__content-wrapper
+								.index-hero__content.wrapper.wrapper--md
+									.index-hero__content-inner
+										.b-label Какой-то текст
+										.h1.index-hero__title Длинный заголовок из нескольких слов
+										p.index-hero__small-text текст поменьше в одну или две строки
+						.swiper-lazy-preloader
+				.swiper-pagination
+				.b-arr-nav.index-hero__nav
+					.b-arr-nav__btn.b-arr-nav__btn--prev.js_btn-prev
+						+svg('arrow')
+					.b-arr-nav__btn.b-arr-nav__btn--next.js_btn-next
+						+svg('arrow')
+	section.is-section.wow(data-wow-offset='100')
+		.wrapper.wrapper--md
+			.is-tabs.is-tabs__nav(data-is='tabs-nav' data-tab-body='tabs-body-a')
+				span.is-tabs__link.is-link(tabindex='0' role='button')
+					| Для дома
+				span.is-tabs__link.is-link(tabindex='0' role='button')
+					| Для бизнеса
+		.is-tabs.is-tabs__container.tabs-body-a
+			.is-tabs__wrapper
+				.is-tabs__tab
+					.slider.hidden-mobile.wow(data-wow-offset='50' data-app="slider-list")
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.slider__row
+										.slider__col.slider__col_width-73
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+												.slider__pic__content
+													.title-text
+														| Гаражные ворота
+										.slider__col.slider__col_width-35
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+												.slider__pic__content
+													.title-text
+														| Входные двери
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+												.slider__pic__content
+													.title-text
+														| Умный #[br] дом
+								.swiper-slide
+									.slider__row
+										.slider__col.slider__col_width-73
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+												.slider__pic__content
+													.title-text
+														| Гаражные ворота
+										.slider__col.slider__col_width-35
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+												.slider__pic__content
+													.title-text
+														| Входные двери
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+												.slider__pic__content
+													.title-text
+														| Умный #[br] дом
+						.slider__pager
+					.slider.hidden-desktop.wow(data-wow-offset='50' data-app="slider-list")
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+										.slider__pic__content
+											.title-text
+												| Гаражные ворота
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+										.slider__pic__content
+											.title-text
+												| Входные двери
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+										.slider__pic__content
+											.title-text
+												| Умный #[br] дом
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+										.slider__pic__content
+											.title-text
+												| Гаражные ворота
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+										.slider__pic__content
+											.title-text
+												| Входные двери
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+										.slider__pic__content
+											.title-text
+												| Умный #[br] дом
+						.slider__pager
+				.is-tabs__tab
+					.slider.hidden-mobile(data-app="slider-list")
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.slider__row
+										.slider__col.slider__col_width-73
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+												.slider__pic__content
+													.title-text
+														| Гаражные ворота
+										.slider__col.slider__col_width-35
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+												.slider__pic__content
+													.title-text
+														| Входные двери
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+												.slider__pic__content
+													.title-text
+														| Умный #[br] дом
+								.swiper-slide
+									.slider__row
+										.slider__col.slider__col_width-73
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+												.slider__pic__content
+													.title-text
+														| Гаражные ворота
+										.slider__col.slider__col_width-35
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+												.slider__pic__content
+													.title-text
+														| Входные двери
+											a.slider__pic(href="#")
+												.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+												.slider__pic__content
+													.title-text
+														| Умный #[br] дом
+						.slider__pager
+					.slider.hidden-desktop(data-app="slider-list")
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+										.slider__pic__content
+											.title-text
+												| Гаражные ворота
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+										.slider__pic__content
+											.title-text
+												| Входные двери
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+										.slider__pic__content
+											.title-text
+												| Умный #[br] дом
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/33.jpg)")
+										.slider__pic__content
+											.title-text
+												| Гаражные ворота
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/35.jpg)")
+										.slider__pic__content
+											.title-text
+												| Входные двери
+								.swiper-slide
+									a.slider__pic(href="#")
+										.slider__pic__image(style="background-image:url(./images/temp/36.jpg)")
+										.slider__pic__content
+											.title-text
+												| Умный #[br] дом
+						.slider__pager
+	section.is-section.wow(data-wow-offset='200')
+		.wrapper.wrapper--sm
+			a.is-link(href='#')
+				.is-columns.b-offer.b-offer--type1
+					.col.b-offer__text-cont
+						span.b-label.b-label-1 Акция до 31 декабря
+						.b-offer__text-block
+							.b-offer__title Ворота и двери года
+							p.b-offer__text
+								| Выгодное предложение на внутренние, сверхпрочные двери ZK для дома и административных помещений.
+					//.col.b-offer__img(data-img='./images/temp/14.jpg' data-img-fast='1')
+					.col.b-offer__img
+						.b-offer__img__block(style="background-image:url(./images/temp/14.jpg)")
+	.edge.edge_images.wow(data-app="edge" data-wow-offset="200")
+		.edge__image
+			img(src="./images/temp/37.jpg" alt="")
+			img(src="./images/temp/38.jpg" alt="")
+			img(src="./images/temp/39.jpg" alt="")
+		.container
+			.edge__box
+				.edge__content
+					.h2 Преимущества #[br]Hörmann
+					.text
+						| Компания Hörmann является одним из ведущих европейских производителей промышленных ворот, перегрузочной техники, а также огнестойких и дымонепроницаемых перегородок. Высококачественные конструктивные элементы производятся на 38 заводах компании, на которых занято свыше 6000 сотрудников.
+					.link-arrow
+						a(href="#") О компании
+				.edge__slider
+					.edge__number
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.subtext
+										| 01
+								.swiper-slide
+									.subtext
+										| 02
+								.swiper-slide
+									.subtext
+										| 03
+					.edge__inner
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.edge__inner__row
+										.edge__inner__img
+											img(src="./images/temp/40.png" alt="")
+										.edge__inner__content
+											.subtext
+												| Компания с мировым именем — в России с 1997 года
+											.text
+												| Крупнейший немецкий концерн с мировой известностью. С 1935 года корпорация Hormann выпустила более 15 миллионов ворот
+								.swiper-slide
+									.edge__inner__row
+										.edge__inner__img
+											img(src="./images/temp/40.png" alt="")
+										.edge__inner__content
+											.subtext
+												| Быстрая поставка оборудования
+											.text
+												| На региональных складах "Хёрманн Руссия" представлен широкий спектр запасных частей, что позволяет значительно сократить сроки поставки оборудования.
+								.swiper-slide
+									.edge__inner__row
+										.edge__inner__img
+											img(src="./images/temp/40.png" alt="")
+										.edge__inner__content
+											.subtext
+												| Сервисное обслуживание и ремонт от производителя
+											.text
+												| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+	section.is-section.is-section--colored.wow(data-wow-offset='200')
+		.wrapper.wrapper--md
+			.advice.wow(data-wow-offset='200')
+				.title-row
+					.h2 Советы Hörmann
+					.link-icon
+						a(href="#")
+							+svg('blocks')
+							span Весь каталог
+				.advice__list(data-app="slider-advice")
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								a.advice__list__item(href="#")
+									.advice__list__item__image
+										img(src="./images/temp/43.jpg" alt="")
+									.subtext
+										| #[span Изоляция гаража.] Чем выгодны для Вас гаражные ворота с теплоизоляцией?
+							.swiper-slide
+								a.advice__list__item(href="#")
+									.advice__list__item__image
+										img(src="./images/temp/44.jpg" alt="")
+									.subtext
+										| #[span Сравнение входных дверей.] Из каких материалов производятся входные двери?
+							.swiper-slide
+								a.advice__list__item(href="#")
+									.advice__list__item__image
+										img(src="./images/temp/45.jpg" alt="")
+									.subtext
+										| 5 причин, по которым монтаж гаражных ворот лучше поручить профессионалам
+	section.is-section.page-index__special-offer-sect.wow(data-wow-offset='200')
+		.wrapper.wrapper--sm
+			a.is-link(href='#')
+				.is-columns.b-offer.b-offer--type2
+					.col.b-offer__text-cont
+						span.b-label.b-label-1 Акция до 31 декабря
+						.b-offer__text-block
+							.b-offer__title Акция на внутренние двери ZK
+							p.b-offer__text
+								| Выгодное предложение на внутренние, сверхпрочные двери ZK для дома и административных помещений.
+					//.col.b-offer__img(data-img='./images/temp/46.jpg' data-img-fast='1')
+					.col.b-offer__img
+						.b-offer__img__block(style="background-image:url(./images/temp/46.jpg)")
+						span.c-label
+							| 11 900 ₽
+	section.is-section.page-index__map-sect.wow(data-wow-offset='200')
+		.wrapper.wrapper--md
+			.map-img(data-img='./images/map.png')
+				.b-center
+					.h4
+						| 12 филиалов и более 600
+						br
+						|  дилеров по всей России
+					p.is-text
+						| Выгодное предложение на внутренние, сверхпрочные двери ZK для дома и административных помещений.
+					a.button.button--md.button--primary(href='#')
+						span.button__text Найти дилера
+	section.is-section.page-index__more-sect.wow(data-wow-offset='200')
+		.page-slider.page-slider--type-more(data-is='page-slider')
+			.wrapper-x-right-dir
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type1
+								a.item.is-link(href='#' data-img='./images/temp/47.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Медиа
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type2
+								a.item.is-link(href='#' data-img='./images/temp/48.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Для дома
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type2
+								a.item.is-link(href='#' data-img='./images/temp/49.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Для бизнеса
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type4
+								a.item.is-link(href='#')
+									span.page-slider__slide-ttl2 Архитекторам
+								a.item.is-link(href='#')
+									span.page-slider__slide-ttl2 Дилерам
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type1
+								a.item.is-link(href='#' data-img='./images/temp/47.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Медиа
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type2
+								a.item.is-link(href='#' data-img='./images/temp/48.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Для дома
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type2
+								a.item.is-link(href='#' data-img='./images/temp/49.jpg' data-img-fast='1')
+									span.page-slider__slide-ttl2 Для бизнеса
+						.swiper-slide
+							.page-slider__slide.page-slider__slide--type4
+								a.item.is-link(href='#')
+									span.page-slider__slide-ttl2 Архитекторам
+								a.item.is-link(href='#')
+									span.page-slider__slide-ttl2 Дилерам
+			.wrapper.wrapper--md
+				.swiper-pagination.js-pager

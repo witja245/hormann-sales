@@ -1,0 +1,149 @@
+.is-services-header {
+    display: block;
+    margin-top: auto;
+    .sh-preview {
+        margin: 0 0 16px 0;
+        width: 320px;
+        @include f(24px,30px);
+    }
+    .sh-br {
+        height: 45px;
+    }
+    .sh-phone-caption {
+        margin: 0 0 16px 0;
+        font-family: "Roboto Condensed", sans-serif;
+        @include f(18px,24px,700);
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+    .sh-phone-number {
+        margin: 0 0 16px 0;
+        font-family: "Roboto Condensed", sans-serif;
+        @include f(42px,42px,200);
+        a {
+            display: inline-block;
+            @include f(42px,42px,200);
+        }
+    }
+    .sh-phone-work {
+        @include f(18px,18px);
+    }
+
+    @media (max-width: $sm) {
+        .sh-preview {
+            width: 100%;
+            margin-bottom: 0;
+        }
+        .sh-br, .sh-phone-caption, .sh-phone-number, .sh-phone-work {
+            display: none;
+        }
+    }
+}
+
+.is-service-slider {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin-left: calc((100vw - 1038px) / 2);
+    padding: 135px 0;
+
+    // layout
+    .ss-layout {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+		&.wow {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: 1s;
+			transition-delay: 0.25s;
+
+			&.animated {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+    }
+    .ss-layout-left {
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        display: block;
+        position: relative;
+        width: 290px;
+    }
+    .ss-layout-right {
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 0 0 0 36px;
+    }
+    .ss-swiper-parent {
+        position: relative;
+        display: block;
+    }
+    .ss-card {
+        position: relative;
+        display: block;
+    }
+    .ss-card-image {
+        position: relative;
+        display: block;
+        margin: 0 0 16px 0;
+        background-color: #F7F7F7;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        @include ratio(141%);
+    }
+
+    // swiper defaults
+    .swiper-container {
+        width: 0;
+        min-width: 100%;
+    }
+    .swiper-slide {
+        width: 176px;
+    }
+
+
+    @media (max-width: $sm) {
+        width: 100%;
+        margin: 0;
+        padding: 50px 20px;
+        .ss-layout {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .ss-layout-left {
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            width: 100%;
+            margin: 0 0 40px 0;
+        }
+        .ss-layout-right {
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            width: 100%;
+            padding: 0;
+        }
+        .swiper-container {
+            width: auto;
+            min-width: 0;
+            margin: 0 -20px;
+        }
+
+    }
+}

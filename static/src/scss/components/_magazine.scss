@@ -1,0 +1,52 @@
+.magazine {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 56px;
+
+	&__content {
+		@media (min-width: $sm) {
+			margin-right: auto;
+			width: 320px;
+		}
+	}
+
+	.text {
+		margin-bottom: 35px;
+	}
+
+	&__image {
+		margin-bottom: 25px;
+		order: -1;
+
+		img {
+			width: 100%;
+
+			@media (min-width: $sm) {
+				width: 384px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			order: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin: 0 auto 120px;
+		width: 800px;
+	}
+}

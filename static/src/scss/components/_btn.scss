@@ -1,0 +1,76 @@
+.btn {
+	display: inline-block;
+	border: 1px solid $color-regal-blue;
+	padding: 11px 26px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: center;
+	color: $color-whisper;
+	background: $color-regal-blue;
+	transition: $animation-speed;
+
+	span {
+		position: relative;
+		padding-right: 15px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			border-top: 2px solid $color-whisper;
+			border-left: 2px solid $color-whisper;
+			width: 5px;
+			height: 5px;
+			transform: translateY(-50%) rotate(135deg);
+			transition: $animation-speed;
+		}
+	}
+
+	&:hover {
+		border-color: $color-midnight-blue;
+		color: $color-whisper;
+		background: $color-midnight-blue;
+	}
+}
+
+.btn_white {
+	border-color: $color-regal-blue;
+	color: $color-regal-blue;
+	background: $color-white;
+
+	span {
+		&::after {
+			border-color: $color-regal-blue;
+		}
+	}
+
+	&.is-active {
+		color: $color-white;
+		background: $color-regal-blue;
+	}
+
+	&:hover {
+		border-color: $color-midnight-blue;
+		color: $color-midnight-blue;
+		background: $color-white;
+	}
+}
+
+.btn_yellow {
+	border-color: $color-sun;
+	color: $color-mine-shaft;
+	background: $color-sun;
+
+	span {
+		&::after {
+			border-color: $color-mine-shaft;
+		}
+	}
+
+	&:hover {
+		border-color: #f99909;
+		color: $color-midnight-blue;
+		background: #f99909;
+	}
+}

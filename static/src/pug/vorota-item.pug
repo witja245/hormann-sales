@@ -1,0 +1,419 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Продукция
+				meta(itemprop="position" content="2")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Гаражные ворота
+				meta(itemprop="position" content="3")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Гаражные секционные ворота
+				meta(itemprop="position" content="4")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/modeli-garazhnykh-sektsionnykh-vorot/")
+					span(itemprop="name") Модели гаражных секционных ворот
+				meta(itemprop="position" content="5")
+	.card
+		.card__image
+			img(src="./images/temp/20.jpg" alt="")
+		.card__content
+			h1.h2 LPU 67 Thermo
+			.card__text
+				| Максимум теплоизоляции, более устойчивые, отличаются плавным ходом.
+			.card__item
+				.card__label
+					| Гофр
+					a.help(href="#")
+				.card__item__row
+					.radio
+						label
+							input(type="radio" name="corrugation" checked)
+							i
+							span M-гофр
+					.radio
+						label
+							input(type="radio" name="corrugation")
+							i
+							span L-гофр
+			.card__item
+				.card__label
+					| Поверхность
+					a.help(href="#")
+				.card__item__row
+					.radio
+						label
+							input(type="radio" name="surface" checked)
+							i
+							span Silkgrain
+					.radio
+						label
+							input(type="radio" name="surface")
+							i
+							span Decograin
+			.card__item
+				.card__label
+					| Цвет: #[span Ночной дуб]
+				.color
+					label(style="background: #FFFFFF;").color-white
+						input(type="radio" name="color" checked)
+						i
+					label(style="background: #E5E3E3;")
+						input(type="radio" name="color")
+						i
+					label(style="background: #CAB293;")
+						input(type="radio" name="color")
+						i
+					label(style="background: #E7C38F;")
+						input(type="radio" name="color")
+						i
+					label(style="background: #F19106;")
+						input(type="radio" name="color")
+						i
+					label(style="background: #B5441A;")
+						input(type="radio" name="color")
+						i
+					label(style="background: #522C20;")
+						input(type="radio" name="color")
+						i
+					label
+						input(type="radio" name="color")
+						img(src="./images/colors/green.jpg")
+						i
+					a.card__item__plus(href="#")
+			.card__item
+				.card__label
+					| Остекление: #[span Мотив S2]
+					a.help(href="#")
+				.card__glazing
+					label
+						input(type="radio" name="glazing")
+						i
+					label
+						input(type="radio" name="glazing")
+						img(src="./images/temp/21.jpg" alt="")
+					label
+						input(type="radio" name="glazing")
+						img(src="./images/temp/22.jpg" alt="")
+					label
+						input(type="radio" name="glazing" checked)
+						img(src="./images/temp/23.jpg" alt="")
+					label.width-88
+						input(type="radio" name="glazing")
+						img(src="./images/temp/24.jpg" alt="")
+			.card__price
+				| от #[span 49 000] ₽
+			.card__buy
+				a.btn(href="#")
+					span Заказать
+				.card__link
+					a(href="#")
+						+svg('pin')
+						span Где купить
+	.feature
+		.feature__content
+			.title-text Характеристики
+			.feature__info
+				ul
+					li
+						.feature__info__label Материал
+						span сталь
+					li
+						.feature__info__label Конструкция
+						span двустенные
+					li
+						.feature__info__label Толщина панели
+						span 67 мм
+					li
+						.feature__info__label Звукоизоляция
+						.feature__info__img
+							img(src="./images/temp/25.jpg" alt="")
+							img(src="./images/temp/25.jpg" alt="")
+							img(src="./images/temp/25.jpg" alt="")
+					li
+						.feature__info__label Теплоизоляция
+						.feature__info__img
+							img(src="./images/temp/26.jpg" alt="")
+							img(src="./images/temp/26.jpg" alt="")
+							img(src="./images/temp/26.jpg" alt="")
+					li
+						.feature__info__label Энергосбережение
+						.feature__info__img
+							img(src="./images/temp/27.jpg" alt="")
+							img(src="./images/temp/27.jpg" alt="")
+							img(src="./images/temp/27.jpg" alt="")
+					li
+						.feature__info__label Max размеры:
+						span 5000 × 3000 мм
+		.feature__image
+			img(src="./images/temp/28.jpg" alt="")
+			.feature__image__guarantee
+				| Гарантия #[span 10 лет] на ворота
+			.feature__image__guarantee.feature__image__guarantee_blue
+				| Гарантия #[span 5 лет] на приводы
+	h2 Аргументы в пользу Hörmann
+	.slider.slider_width-488(data-app="slider-item")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.slider__item
+						.slider__item__image
+							img(src="./images/temp/29.jpg" alt="")
+						.title-text
+							| Высокое качество Hörmann экономит ваши деньги
+						.slider__item__text
+							| Рассказать о том, что несмотря на то, что цена у нас выше, чем у конкурентов, ворота в перспективе обойдутся клиенту намного дешевле и сэкономят время и деньги.
+							br
+							br
+							| Так как ворота будут меньше ломаться, ржаветь и тп. (Исключающее коррозию пластиковое основание направляющих. Уникальное, отсутствующее у конкурентов решение.), клиент будет экономить на ремонте, сервисном обслуживании, замене деталей. Можно упомянуть про гарантию и что в нее входит.
+				.swiper-slide
+					.slider__item
+						.slider__item__image
+							img(src="./images/temp/30.jpg" alt="")
+						.title-text
+							| Повышенная теплоизоляция
+						.slider__item__text
+							| Краткое описание преимущества... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+							br
+							br
+							| Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+				.swiper-slide
+					.slider__item
+						.slider__item__image
+							img(src="./images/temp/31.jpg" alt="")
+						.title-text
+							| Защита от взлома и фиксация с помощью запирающего устройства
+						.slider__item__text
+							| Краткое описание преимущества... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+							br
+							br
+							| Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+		.slider__pager
+	.slider.hidden-mobile(data-app="slider-list")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.slider__row
+						.slider__col.slider__col_width-73
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/50.jpg)")
+						.slider__col.slider__col_width-35
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/51.jpg)")
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/52.jpg)")
+				.swiper-slide
+					.slider__row
+						.slider__col.slider__col_width-73
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/50.jpg)")
+						.slider__col.slider__col_width-35
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/51.jpg)")
+							.slider__pic
+								.slider__pic__image(style="background-image:url(./images/temp/52.jpg)")
+		.slider__pager
+	.slider.hidden-desktop(data-app="slider-list")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/50.jpg)")
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/51.jpg)")
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/52.jpg)")
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/50.jpg)")
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/51.jpg)")
+				.swiper-slide
+					.slider__pic
+						.slider__pic__image(style="background-image:url(./images/temp/52.jpg)")
+		.slider__pager
+	.width-700.margin-72
+		h2 Технические решения для безопасности
+		.text
+			| Безопасность эксплуатации гаражных ворот является главным приоритетом компании Hörmann. Здесь своими инновационными техническими решениями Hörmann задает нормы и правила. Доказательством этому служат многочисленные патенты Hörmann.
+	.bitmap
+		.bitmap__content
+			.accordion(data-app="accordion")
+				.accordion__item
+					.title-text
+						| Система  «пружина в пружине»
+					.accordion__drop
+						| Сдвоенные пружины растяжения и сдвоенные несущие проволочные тросы с каждой стороны обеспечивают защиту полотна ворот от падения. Благодаря запатентованной системе «пружина в пружине» сломанная пружина не может отскочить в сторону и кого-либо травмировать. Секционные ворота шириной до 3000 мм и высотой 2625 мм серийно оснащаются испытанной и надежно зарекомендовавшей себя системой пружин растяжения.
+				.accordion__item
+					.title-text
+						| Защита от обрыва пружин
+					.accordion__drop
+						| Сдвоенные пружины растяжения и сдвоенные несущие проволочные тросы с каждой стороны обеспечивают защиту полотна ворот от падения. Благодаря запатентованной системе «пружина в пружине» сломанная пружина не может отскочить в сторону и кого-либо травмировать. Секционные ворота шириной до 3000 мм и высотой 2625 мм серийно оснащаются испытанной и надежно зарекомендовавшей себя системой пружин растяжения.
+				.accordion__item
+					.title-text
+						| Безопасное ведение полотна ворот
+					.accordion__drop
+						| Сдвоенные пружины растяжения и сдвоенные несущие проволочные тросы с каждой стороны обеспечивают защиту полотна ворот от падения. Благодаря запатентованной системе «пружина в пружине» сломанная пружина не может отскочить в сторону и кого-либо травмировать. Секционные ворота шириной до 3000 мм и высотой 2625 мм серийно оснащаются испытанной и надежно зарекомендовавшей себя системой пружин растяжения.
+				.accordion__item
+					.title-text
+						| Защита от защемления пальцев
+					.accordion__drop
+						| Сдвоенные пружины растяжения и сдвоенные несущие проволочные тросы с каждой стороны обеспечивают защиту полотна ворот от падения. Благодаря запатентованной системе «пружина в пружине» сломанная пружина не может отскочить в сторону и кого-либо травмировать. Секционные ворота шириной до 3000 мм и высотой 2625 мм серийно оснащаются испытанной и надежно зарекомендовавшей себя системой пружин растяжения.
+				.accordion__item
+					.title-text
+						| Защита от захватывания
+					.accordion__drop
+						| Сдвоенные пружины растяжения и сдвоенные несущие проволочные тросы с каждой стороны обеспечивают защиту полотна ворот от падения. Благодаря запатентованной системе «пружина в пружине» сломанная пружина не может отскочить в сторону и кого-либо травмировать. Секционные ворота шириной до 3000 мм и высотой 2625 мм серийно оснащаются испытанной и надежно зарекомендовавшей себя системой пружин растяжения.
+		.bitmap__image
+			img(src="./images/temp/32.jpg" alt="")
+	.slider(data-app="slider-videos")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					a.slider__video(href="https://www.youtube.com/watch?v=NYd1NuXVaHA&ab_channel=ITECH" style="background-image:url(./images/temp/47.jpg)" data-fancybox)
+						.slider__video__icon
+							+svg('play')
+						.slider__video__title
+							| Заголовок видео
+				.swiper-slide
+					a.slider__video(href="https://www.youtube.com/watch?v=NYd1NuXVaHA&ab_channel=ITECH" style="background-image:url(./images/temp/53.jpg)" data-fancybox)
+						.slider__video__icon
+							+svg('play')
+						.slider__video__title
+							| Длинный заголовок видеоролика в несколько строчек
+				.swiper-slide
+					a.slider__video(href="https://www.youtube.com/watch?v=NYd1NuXVaHA&ab_channel=ITECH" style="background-image:url(./images/temp/47.jpg)" data-fancybox)
+						.slider__video__icon
+							+svg('play')
+						.slider__video__title
+							| Заголовок видео
+		.slider__pager
+	h2 Документация
+	.records
+		.records__row
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/1.jpg" alt="")
+					.records__item__title
+						| Гаражные секционные документы
+					.records__item__text
+						| PDF, 15 Mb
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/2.jpg" alt="")
+					.records__item__title
+						| Гарантия для ворот
+					.records__item__text
+						| PDF, 6 Mb
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/3.jpg" alt="")
+					.records__item__title
+						| Название документа
+					.records__item__text
+						| PDF, 3 Mb
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/4.jpg" alt="")
+					.records__item__title
+						| Название документа
+					.records__item__text
+						| PDF, 2 Mb
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/5.jpg" alt="")
+					.records__item__title
+						| Гаражные секционные документы
+					.records__item__text
+						| PDF, 150 Mb
+			.records__col
+				a.records__item(href="#" download)
+					.records__item__image
+						img(src="./images/records/6.jpg" alt="")
+					.records__item__title
+						| Длинное название документа в две стрчоки
+					.records__item__text
+						| PDF, 1 Mb
+	.title-row
+		h2 Лидеры продаж
+		.link-icon
+			a(href="#")
+				+svg('blocks')
+				span Весь каталог
+	.slider(data-app="slider-list")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.slider__row
+						.slider__col.slider__col_width-73
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/54.jpg)")
+						.slider__col.slider__col_width-35
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/55.jpg)")
+								.title-text
+									| Пульты ДУ&nbsp;BiSecur
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/56.jpg)")
+								.title-text
+									| Входные двери Thermo 46
+				.swiper-slide
+					.slider__row
+						.slider__col.slider__col_width-73
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/54.jpg)")
+						.slider__col.slider__col_width-35
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/55.jpg)")
+								.title-text
+									| Пульты ДУ&nbsp;BiSecur
+							a.slider__pic(href="#")
+								.slider__pic__image(style="background-image:url(./images/temp/56.jpg)")
+								.title-text
+									| Входные двери Thermo 46
+		.slider__pager
+	.check
+		.check__content
+			.check__title
+				.title-text
+					| Узнать цены на гаражные ворота
+			.check__pick
+				.radio
+					label
+						input(type="radio" name="check" checked)
+						i
+						span Частный гараж
+				.radio
+					label
+						input(type="radio" name="check" checked)
+						i
+						span Парковка
+				.radio
+					label
+						input(type="radio" name="check" checked)
+						i
+						span Промышленное здание
+				.radio
+					label
+						input(type="radio" name="check" checked)
+						i
+						span Другое
+				a.btn(href="#")
+					span Продолжить
+		.check__image
+			img(src="./images/temp/57.jpg" alt="")

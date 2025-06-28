@@ -1,0 +1,12 @@
+extends pug/base
+
+append vars
+	//-
+
+block content
+	.main
+		include pug/components/header
+		.content
+			include pug/portfolio-detail
+		include pug/components/footer
+		include pug/components/modals

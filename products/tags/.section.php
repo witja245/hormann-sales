@@ -1,0 +1,4 @@
+<?
+$sSectionName = "Теги";
+$arDirProperties = array();
+?>

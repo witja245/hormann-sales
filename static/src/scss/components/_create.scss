@@ -1,0 +1,174 @@
+.create {
+	margin-bottom: 56px;
+	padding: 40px 0;
+	background: $color-whisper;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 35px;
+
+		.title-text {
+			@media (min-width: $sm) {
+				max-width: 700px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		margin: 0 0 24px;
+
+		a {
+			display: block;
+		}
+
+		@media (min-width: $sm) {
+			margin: 0 30px 0 0;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	.title-text {
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 22px;
+
+		@media (min-width: $sm) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		svg {
+			display: block;
+			margin-right: 20px;
+			width: 26px;
+			height: 20px;
+		}
+
+		& + & {
+			margin-top: 20px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		width: 100%;
+		margin: 24px 0 0;
+
+		&__arrow {
+			position: absolute;
+			left: 32px;
+			top: 50%;
+			z-index: 5;
+			border: none;
+			border-radius: 50%;
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			background: $color-white;
+
+			svg {
+				position: relative;
+				right: -1px;
+				display: block;
+				margin: 0 auto;
+				width: 13px;
+				height: 13px;
+			}
+
+			&_prev {
+				svg {
+					left: -2px;
+					transform: rotate(180deg);
+				}
+			}
+
+			&_next {
+				left: auto;
+				right: 32px;
+			}
+
+			&.swiper-button-disabled {
+				opacity: 0;
+				pointer-events: none;
+				visibility: hidden;
+			}
+
+			@media (max-width: $sm - 1) {
+				display: none;
+			}
+		}
+
+		&__pager {
+			margin-top: 20px;
+			text-align: right;
+
+			@media (min-width: $sm) {
+				display: none;
+			}
+		}
+
+		@media (min-width: $sm) {
+			margin: 0 0 0 auto;
+			width: 696px;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.create__row,
+		.create__list,
+		.create__slider {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: 1s;
+			transition-delay: 0.25s;
+		}
+
+		.create__list {
+			transition-delay: 0.5s;
+		}
+
+		.create__slider {
+			transition-delay: 0.65s;
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.create__row,
+			.create__list,
+			.create__slider {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+		padding: 80px 0;
+	}
+}

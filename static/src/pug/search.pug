@@ -1,0 +1,49 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/poisk/")
+					span(itemprop="name") Поиск
+				meta(itemprop="position" content="2")
+	form.title-row(action="#" method="get" data-app="form")
+		h1.h2.wow(data-wow-offset='200') Результаты поиска по запросу
+		.title-row__search.wow(data-wow-offset='200')
+			input(type="text" name="search" placeholder="Поиск по сайту" data-validation={
+				maxlength: 300,
+			} required)
+			button(type="submit"): +svg('search')
+	.wrapp.wow(data-wow-offset='200')
+		.wrapp__side.wrapp__side_margin
+			a.btn(href="#") Все
+			a.btn.btn_white(href="#") Продукция
+			a.btn.btn_white(href="#") Новости и советы
+		.wrapp__content
+			.search
+				a.search__item(href="#")
+					.title-text Входные двери Thermo46 из стали и алюминия
+					.text Краткий текст из начала найденной страницы... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+				a.search__item(href="#")
+					.title-text Как выбрать дверь для детской комнаты
+					.text Краткий текст из начала найденной страницы... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+				a.search__item(href="#")
+					.title-text Внутренние двери
+					.text Краткий текст из начала найденной страницы... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+				a.search__item(href="#")
+					.title-text Гаражные боковые двери
+					.text Краткий текст из начала найденной страницы... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+				a.search__item(href="#")
+					.title-text Заголовок страницы
+					.text Краткий текст из начала найденной страницы... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+			.pagination.wow(data-wow-offset='200')
+				ul
+					li.hidden: a.pagination__prev(href="#")
+					li: a.is-active(href="#") 01
+					li: a(href="#") 02
+					li: a(href="#") 03
+					li: a(href="#") 04
+					li: a(href="#") 05
+					li: a.pagination__next(href="#")

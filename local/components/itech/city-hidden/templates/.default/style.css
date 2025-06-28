@@ -1,0 +1,35 @@
+.modal_cities_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.modal_cities_col {
+    margin-bottom: 20px;
+    width: calc(100% / 4);
+}
+.modal__citys {
+    flex-wrap: wrap;
+}
+.modal-geo .title-text {
+    margin-bottom: 15px;
+}
+.modal__branches {
+    margin-bottom: 30px;
+}
+.modal.modal-geo .modal__citys ul {
+    width: 100%;
+}
+
+@media(max-width: 991px) {
+    .modal_cities_col {
+        width: calc(100% / 3);
+    }
+}
+@media(max-width: 767px) {
+    .modal_cities_col {
+        width: calc(100% / 2);
+    }
+    .modal.modal-geo {
+        overflow-y: scroll !important;
+    }
+}

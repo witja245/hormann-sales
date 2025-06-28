@@ -1,0 +1,542 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Продукция
+				meta(itemprop="position" content="2")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/garazhnyye-vorota/")
+					span(itemprop="name") Гаражные ворота
+				meta(itemprop="position" content="3")
+	h1.h2.wow(data-wow-offset='200') Гаражные ворота
+	.topic
+		.topic__row
+			.topic__col
+				a.topic__item.wow(href="#" data-wow-offset='200' style="background-image:url(./images/temp/16.jpg)")
+					.title-text
+						| Секционные ворота
+					.subtext
+						| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+			.topic__col
+				a.topic__item.wow(href="#" data-wow-offset='200' style="background-image:url(./images/temp/17.jpg)")
+					.title-text
+						| Распашные ворота
+					.subtext
+						| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+			.topic__col
+				a.topic__item.wow(href="#" data-wow-offset='200' style="background-image:url(./images/temp/18.jpg)")
+					.title-text
+						| Подъемные ворота
+					.subtext
+						| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+			.topic__col
+				a.topic__item.wow(href="#" data-wow-offset='200' style="background-image:url(./images/temp/19.jpg)")
+					.title-text
+						| Секционные ворота
+					.subtext
+						| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору
+	.config.wow(data-wow-offset='200')
+		.config__option
+			form.form(action="./ajax/test.json" method="get" data-app="form")
+				.title-text Заказать ворота
+				.form__row
+					.form__col
+						.form__input
+							.form__label
+								| Ваше имя
+							.form__field
+								input(type="text" name="name" data-validation={
+									regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+									maxlength: 300,
+								} required)
+					.form__col
+						.form__input
+							.form__label
+								| Город
+							.form__field
+								input(type="text" name="city" data-validation={
+									regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+									maxlength: 300,
+								} required)
+				.form__row
+					.form__col
+						.form__input
+							.form__label
+								| Email
+							.form__field
+								input(type="email" name="email" data-validation={
+									regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+									maxlength: 254,
+								} required)
+					.form__col
+						.form__input
+							.form__label
+								| Телефон *
+							.form__field
+								input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__submit
+					button.btn(type="submit")
+						span Отправить
+					.checkbox
+						label
+							input(type="checkbox" name="checkbox" required)
+							i
+							span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]
+			//.config__item
+			//	.config__title
+			//		| Материал
+			//	.radio
+			//		label
+			//			input(type="radio" name="material" checked)
+			//			i
+			//			span Дерево
+			//		label
+			//			input(type="radio" name="material")
+			//			i
+			//			span Алюминий
+			//		label
+			//			input(type="radio" name="material")
+			//			i
+			//			span Сталь
+			//.config__item
+			//	.config__title
+			//		| Размер, мм
+			//	.config__size
+			//		.config__size__item
+			//			.config__size__label
+			//				| Ширина
+			//			.config__size__input
+			//				input(type="text")
+			//		.config__size__item
+			//			.config__size__label
+			//				| Высота
+			//			.config__size__input
+			//				input(type="text")
+			//.config__item
+			//	.config__title
+			//		| Цвет
+			//	.color
+			//		label(style="background: #FFFFFF;").color-white
+			//			input(type="radio" name="color" checked)
+			//			i
+			//		label(style="background: #E5E3E3;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label(style="background: #CAB293;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label(style="background: #E7C38F;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label(style="background: #F19106;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label(style="background: #B5441A;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label(style="background: #522C20;")
+			//			input(type="radio" name="color")
+			//			i
+			//		label
+			//			input(type="radio" name="color")
+			//			img(src="./images/colors/green.jpg")
+			//			i
+			//.config__item
+			//	.config__title
+			//		| Мотив
+			//	.config__motive
+			//		label
+			//			input(type="radio" name="motive" checked)
+			//			img(src="./images/temp/8.jpg" alt="")
+			//		label
+			//			input(type="radio" name="motive")
+			//			img(src="./images/temp/9.jpg" alt="")
+			//		label
+			//			input(type="radio" name="motive")
+			//			img(src="./images/temp/10.jpg" alt="")
+			//		label
+			//			input(type="radio" name="motive")
+			//			img(src="./images/temp/11.jpg" alt="")
+			//.config__price
+			//	| от #[span 49 000] ₽
+			//a.btn.js-order-gate-open(href="#" data-id="4635")
+			//	span Перейти к подробному калькулятору
+		//.config__image
+		//	img(src="./images/temp/7.jpg" alt="")
+	.title-text.wow(data-wow-offset='200') Каталог ворот
+	.catalogue.wow(data-wow-offset='200')
+		form.catalogue__option.is-active(data-app="filter" action="#")
+			.catalogue__option__title.catalogue__option__title--top
+				| Фильтр
+			.catalogue__option__drop
+				.catalogue__option__item
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Популярные
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Акция
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Дизайн
+				.catalogue__option__item
+					.catalogue__option__title
+						| Поверхность
+					.catalogue__option__select(data-app="select")
+						select.js-option-item()
+							option(value="1") Любая
+							option(value="2") Silkgrain
+							option(value="3") Decograin
+							option(value="4") Woodgrain
+							option(value="5") Sandgrain
+							option(value="6") Duragrain
+				.catalogue__option__item
+					.catalogue__option__title
+						| Мотив
+					.catalogue__option__select(data-app="select")
+						select.js-option-item()
+							option(value="1") Любой
+							option(value="2") S-гофр
+							option(value="3") M-гофр
+							option(value="4") L-гофр
+							option(value="5") D-гофр
+							option(value="6") Т-гофр
+							option(value="7") Кассета
+				.catalogue__option__item(data-app="catalogue-more")
+					.catalogue__option__title
+						| Цвет
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Белый
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Серый
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Синий
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Название цвета
+					.checkbox
+						label
+							input.js-option-item(type="checkbox")
+							i
+							span Длинное название цвета
+					.catalogue__option__more
+						button(type="button") Еще
+					.checkbox-drop
+						.checkbox
+							label
+								input.js-option-item(type="checkbox")
+								i
+								span Длинное название цвета
+				.catalogue__option__item
+					.catalogue__option__title
+						| Размер
+					.catalogue__option__select(data-app="select")
+						select.js-option-item()
+							option(value="1") Любой
+							option(value="2") 2250 х 1875
+							option(value="3") 2250 х 2000
+							option(value="4") 2250 х 2125
+							option(value="5") 2375 х 1875
+							option(value="6") 2375 х 2000
+							option(value="7") 2375 х 2125
+				.catalogue__option__item
+					.catalogue__option__title
+						| Тип ворот
+						a.help(href="#modal-type" data-fancybox) ?
+					.catalogue__option__select(data-app="select")
+						select.js-option-item()
+							option(value="1") Любой
+							option(value="2") Секционные
+							option(value="3") Подъемно-поворотные
+							option(value="4") Рулонные
+							option(value="5") Откатные секционные
+				.catalogue__option__item
+					.catalogue__option__title
+						| Материил
+					.catalogue__option__select(data-app="select")
+						select.js-option-item()
+							option(value="1") Любой
+							option(value="2") Сталь
+							option(value="3") Массив дерева
+							option(value="4") Алюминий
+				a.catalogue__option__result(href="#" data-ajax="./ajax/catalogue-result.json")
+					.catalogue__option__result__text
+						| Выбрано: #[span]
+					.catalogue__option__result__link
+						| Подобрать
+				.catalogue__option__btns
+					button.btn(type="submit") Применить
+					button.btn(type="submit") Отменить
+		.catalogue__content
+			.catalogue__type
+				.catalogue__type__row
+					button.btn.btn_white(type="button") Металлические
+					button.btn.btn_white(type="button") Энергосберегающие
+					button.btn.btn_white(type="button") Стальные
+					button.btn.btn_white(type="button") Рулонные
+					button.btn.btn_white(type="button") Откатные
+				.catalogue__type__row
+					button.btn.btn_white(type="button") Для гаража
+					button.btn.btn_white(type="button") Для банка
+					button.btn.btn_white(type="button") Для автомойки
+					button.btn.btn_white(type="button") Для кафе
+					button.btn.btn_white(type="button") Для гостиницы
+			.catalogue__list
+				.catalogue__row
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/12.jpg" alt="")
+								.catalogue__item__action Акция
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#") Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/13.jpg" alt="")
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#order-gate" data-fancybox) Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/13.jpg" alt="")
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#") Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/12.jpg" alt="")
+								.catalogue__item__action Хит продаж
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#") Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/12.jpg" alt="")
+								.catalogue__item__action Акция
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#") Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+					.catalogue__col
+						.catalogue__item
+							a.catalogue__item__image(href="#")
+								img(src="./images/temp/13.jpg" alt="")
+								.catalogue__item__action Хит продаж
+							.catalogue__item__content
+								.catalogue__item__title
+									a(href="#") Ворота Hormann Название модели
+								.catalogue__item__info
+									ul
+										li Тип: секционные
+										li Материал: алюминий
+										li Срок изготовления: 9 дней
+								.catalogue__item__row
+									.catalogue__item__price
+										| от 999 000 ₽
+									a.btn.js-order-gate-open(href="#" data-id="4635")
+										span Заказать
+				.pagination.wow(data-wow-offset='200')
+					.pagination__row
+						ul
+							li.hidden: a.pagination__prev(href="#")
+							li: a.is-active(href="#") 01
+							li: a(href="#") 02
+							li: a(href="#") 03
+							li: a(href="#") 04
+							li: a(href="#") 05
+							li: a.pagination__next(href="#")
+						.pagination__more
+							a(href="#") Показать еще
+				.subtext.wow(data-wow-offset='200')
+					| SEO текст внизу страницы... Безопасность эксплуатации гаражных ворот является главным приоритетом компании Hörmann. Здесь своими инновационными техническими решениями Hörmann задает нормы и правила. Доказательством этому служат многочисленные патенты Hörmann.
+					br
+					br
+					| Безопасность эксплуатации гаражных ворот является главным приоритетом компании Hörmann. Здесь своими инновационными техническими решениями Hörmann задает нормы и правила. Доказательством этому служат многочисленные патенты Hörmann.Безопасность эксплуатации гаражных ворот является главным приоритетом компании Hörmann. Здесь своими инновационными техническими решениями Hörmann задает нормы и правила. Доказательством этому служат многочисленные патенты Hörmann.
+	a.banner.wow(href="#" data-wow-offset='200')
+		.banner__content
+			.title-text
+				| Автоматические секционные ворота по выгодной цене
+			.banner__text
+				| Выгодное предложение на внутренние, сверхпрочные двери ZK для дома и административных помещений.
+		.banner__image
+			img(src="./images/temp/14.jpg" alt="")
+	//form.form.wow(data-wow-offset='200' action="./ajax/test.json" method="get" data-app="form")
+	//	.title-text Заказать ворота
+	//	.form__row
+	//		.form__col
+	//			.form__input
+	//				.form__label
+	//					| Ваше имя
+	//				.form__field
+	//					input(type="text" name="name" data-validation={
+	//						regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+	//						maxlength: 300,
+	//					} required)
+	//		.form__col
+	//			.form__input
+	//				.form__label
+	//					| Город
+	//				.form__field
+	//					input(type="text" name="city" data-validation={
+	//						regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+	//						maxlength: 300,
+	//					} required)
+	//	.form__row
+	//		.form__col
+	//			.form__input
+	//				.form__label
+	//					| Email
+	//				.form__field
+	//					input(type="email" name="email" data-validation={
+	//						regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+	//						maxlength: 254,
+	//					} required)
+	//		.form__col
+	//			.form__input
+	//				.form__label
+	//					| Телефон *
+	//				.form__field
+	//					input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+	//	.form__submit
+	//		button.btn(type="submit")
+	//			span Отправить
+	//		.checkbox
+	//			label
+	//				input(type="checkbox" name="checkbox" required)
+	//				i
+	//				span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]
+.hidden
+	.modal.modal-type#modal-type
+		.modal__gif
+			img(src="./images/lift-and-turn-static.gif" alt="")
+		.title-text
+			a(href="#") Подъемно-поворотные
+		.modal__list
+			ul
+				li • Полотно целиком поворачивается и поднимается наверх
+				li • В открытом положении находятся под потолком
+				li • Экономия пространства внутри гаража
+	form.modal.modal-order#order-gate(action="./ajax/test.json" method="get" data-app="order-gate||form" data-url="./ajax/order-gate.json" data-type="this")
+		.h2 Заказать ворота
+		.modal__product
+			.modal__product__image
+				img(src="./images/temp/8.jpg" alt="")
+			.modal__product__content
+				.title-text
+					a(href="#") Ворота Hormann #[br] Название модели
+				.text
+					a(href="#") секционные, алюминий
+		.form.form-no-bg
+			.form__input
+				.form__label
+					| Ваше имя
+				.form__field
+					input(type="text" name="name" data-validation={
+						regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+						maxlength: 300,
+					} required)
+			.form__input
+				.form__label
+					| Город
+				.form__field
+					input(type="text" name="city" data-validation={
+						regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+						maxlength: 300,
+					} required)
+			.form__input
+				.form__label
+					| Телефон*
+				.form__field
+					input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+			.form__input
+				.form__label
+					| Email
+				.form__field
+					input(type="email" placeholder="example@example.com" name="email" data-validation={
+						regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+						maxlength: 254,
+					} required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

@@ -1,0 +1,118 @@
+.booklet {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+	}
+
+	&__col {
+		padding: 0 16px;
+		width: 100%;
+
+		& + & {
+			@media (max-width: $sm - 1) {
+				margin-top: 30px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			width: 33.33334%;
+		}
+	}
+
+	&__item {
+		border: 1px solid $color-alto;
+		padding: 30px;
+
+		&__head {
+			display: flex;
+			margin-bottom: 30px;
+		}
+
+		&__icon {
+			margin-right: 14px;
+			flex-shrink: 0;
+
+			svg {
+				width: 35px;
+				height: 46px;
+				fill: none;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+
+		&__title {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+		}
+
+		&__text {
+			margin-bottom: 4px;
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		&__desc {
+			display: flex;
+			font-size: 12px;
+			line-height: 16px;
+			color: $color-rolling-stone;
+		}
+
+		&__art {
+			margin-right: 8px;
+		}
+
+		&__bottom {
+			display: flex;
+			align-items: center;
+		}
+
+		&__size {
+			margin-left: 24px;
+			font-size: 12px;
+			color: $color-rolling-stone;
+		}
+
+		@media (min-width: $sm) {
+			padding: 40px 40px 50px;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.booklet__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .booklet__col {
+				transition-delay: 0.5s;
+
+				+ .booklet__col {
+					transition-delay: 0.65s;
+
+					+ .booklet__col {
+						transition-delay: 0.75s;
+					}
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.booklet__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}

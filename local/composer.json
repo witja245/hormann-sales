@@ -1,0 +1,20 @@
+{
+  "authors": [
+    {
+      "name": "Svyatoslav Tregubov",
+      "email": "tregubov.s@asteq.ru"
+    }
+  ],
+  "require": {
+    "ext-intl": "*",
+    "dompdf/dompdf": "^1.0",
+    "mpdf/mpdf": "^8.0",
+    "box/spout": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Itech\\": "itech",
+      "Asteq\\": "asteq"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+include mixins
+
+block vars
+	-
+		var baseDir = './'
+	-
+		var title = 'Herman'
+		var description = 'Herman'
+		var image = './images/temp/72.jpg'
+	-
+		var html = {
+			attrs: {
+				lang: 'ru'
+			},
+			classList: []
+		}
+	-
+		var body = {
+			attrs: {},
+			classList: []
+		}
+	-
+		var meta = {
+			appleMobileWebAppCapable: null,
+			appleMobileWebAppStatusBarStyle: null,
+			appleMobileWebAppTitle: null,
+			appleTouchFullscreen: null,
+			applicationName: null,
+			charset: 'utf-8',
+			description: description,
+			formatDetection: {
+				address: true,
+				date: true,
+				email: true,
+				telephone: true
+			},
+			keywords: [],
+			msapplicationTileColor: null,
+			msapplicationTileImage: null,
+			msapplicationNotification: null,
+			msapplicationSquare70x70logo: null,
+			msapplicationSquare150x150logo: null,
+			msapplicationSquare310x310logo: null,
+			msapplicationWide310x150logo: null,
+			msapplicationConfig: null,
+			ogDescription: description,
+			ogImage: image,
+			ogImageType: null,
+			ogImageWidth: null,
+			ogImageHeight: null,
+			ogImageAlt: null,
+			ogLocale: 'ru_RU',
+			ogTitle: title,
+			ogType: 'website',
+			ogUrl: null,
+			themeColor: null,
+			twitterCard: 'summary_large_image',
+			twitterSite: null,
+			twitterCreator: null,
+			twitterTitle: title,
+			twitterDescription: description,
+			twitterImage: image,
+			viewport: 'width=device-width',
+			XUACompatible: 'IE=edge'
+		}
+	-
+		var link = {
+			appleTouchIcon: null,
+			appleTouchIcon40x40: null,
+			appleTouchIcon57x57: null,
+			appleTouchIcon58x58: null,
+			appleTouchIcon60x60: null,
+			appleTouchIcon72x72: null,
+			appleTouchIcon76x76: null,
+			appleTouchIcon80x80: null,
+			appleTouchIcon87x87: null,
+			appleTouchIcon114x114: null,
+			appleTouchIcon120x120: null,
+			appleTouchIcon144x144: null,
+			appleTouchIcon152x152: null,
+			appleTouchIcon167x167: null,
+			appleTouchIcon180x180: null,
+			appleTouchIcon1024x1024: null,
+			appleTouchIconPrecomposed: null,
+			appleTouchIconPrecomposed40x40: null,
+			appleTouchIconPrecomposed57x57: null,
+			appleTouchIconPrecomposed58x58: null,
+			appleTouchIconPrecomposed60x60: null,
+			appleTouchIconPrecomposed72x72: null,
+			appleTouchIconPrecomposed76x76: null,
+			appleTouchIconPrecomposed80x80: null,
+			appleTouchIconPrecomposed87x87: null,
+			appleTouchIconPrecomposed114x114: null,
+			appleTouchIconPrecomposed120x120: null,
+			appleTouchIconPrecomposed144x144: null,
+			appleTouchIconPrecomposed152x152: null,
+			appleTouchIconPrecomposed167x167: null,
+			appleTouchIconPrecomposed180x180: null,
+			appleTouchIconPrecomposed1024x1024: null,
+			icon: null,
+			icon16x16: null,
+			icon32x32: null,
+			icon96x96: null,
+			icon128x128: null,
+			icon192x192: null,
+			icon194x194: null,
+			icon196x196: null,
+			imageSrc: image,
+			manifest: null,
+			maskIcon: {
+				href: null,
+				color: null
+			}
+		}
+
+doctype html
+html(class=html.classList)&attributes(html.attrs)
+	head
+		block head-start
+		block meta
+			if meta.charset !== null
+				meta(charset!=meta.charset)
+			if meta.XUACompatible !== null
+				meta(http-equiv="X-UA-Compatible" content!=meta.XUACompatible)
+			if meta.viewport !== null
+				meta#viewport(name="viewport" content!=meta.viewport)
+			if meta.description !== null
+				meta(name="description" content!=meta.description)
+			if meta.keywords !== null && !(Array.isArray(meta.keywords) && !meta.keywords.length)
+				meta(name="keywords" content!=(Array.isArray(meta.keywords) ? meta.keywords.join(', ') : meta.keywords))
+			if meta.ogType !== null && (meta.ogUrl || meta.ogTitle || meta.ogDescription || meta.ogImage)
+				meta(property="og:type" content!=meta.ogType)
+			if meta.ogUrl !== null
+				meta(property="og:url" content!=meta.ogUrl)
+			if meta.ogLocale !== null && (meta.ogUrl || meta.ogTitle || meta.ogDescription || meta.ogImage)
+				meta(property="og:locale" content!=meta.ogLocale)
+			if meta.ogTitle !== null
+				meta(property="og:title" content!=meta.ogTitle)
+			if meta.ogDescription !== null
+				meta(property="og:description" content!=meta.ogDescription)
+			if meta.ogImage !== null
+				meta(property="og:image" content!=meta.ogImage)
+			if meta.ogImageType !== null
+				meta(property="og:image:type" content!=meta.ogImageType)
+			if meta.ogImageWidth !== null
+				meta(property="og:image:width" content!=meta.ogImageWidth)
+			if meta.ogImageHeight !== null
+				meta(property="og:image:height" content!=meta.ogImageHeight)
+			if meta.ogImageAlt !== null
+				meta(property="og:image:alt" content!=meta.ogImageAlt)
+			if meta.twitterCard !== null && (meta.twitterSite || meta.twitterCreator || meta.twitterTitle || meta.twitterDescription || meta.twitterImage)
+				meta(name="twitter:card" content!=meta.twitterCard)
+			if meta.twitterSite !== null
+				meta(name="twitter:site" content!=meta.twitterSite)
+			if meta.twitterCreator !== null
+				meta(name="twitter:creator" content!=meta.twitterCreator)
+			if meta.twitterTitle !== null
+				meta(name="twitter:title" content!=meta.twitterTitle)
+			if meta.twitterDescription !== null
+				meta(name="twitter:description" content!=meta.twitterDescription)
+			if meta.twitterImage !== null
+				meta(name="twitter:image" content!=meta.twitterImage)
+			if meta.appleMobileWebAppCapable !== null
+				meta(name="apple-mobile-web-app-capable" content!=meta.appleMobileWebAppCapable)
+			if meta.appleMobileWebAppStatusBarStyle !== null
+				meta(name="apple-mobile-web-app-status-bar-style" content!=meta.appleMobileWebAppStatusBarStyle)
+			if meta.appleMobileWebAppTitle !== null
+				meta(name="apple-mobile-web-app-title" content!=meta.appleMobileWebAppTitle)
+			if meta.applicationName !== null
+				meta(name="application-name" content!=meta.applicationName)
+			if meta.msapplicationTileColor !== null
+				meta(name="msapplication-TileColor" content!=meta.msapplicationTileColor)
+			if meta.msapplicationTileImage !== null
+				meta(name="msapplication-TileImage" content!=meta.msapplicationTileImage)
+			if meta.msapplicationSquare70x70logo !== null
+				meta(name="msapplication-square70x70logo" content!=meta.msapplicationSquare70x70logo)
+			if meta.msapplicationSquare150x150logo !== null
+				meta(name="msapplication-square150x150logo" content!=meta.msapplicationSquare150x150logo)
+			if meta.msapplicationWide310x150logo !== null
+				meta(name="msapplication-wide310x150logo" content!=meta.msapplicationWide310x150logo)
+			if meta.msapplicationSquare310x310logo !== null
+				meta(name="msapplication-square310x310logo" content!=meta.msapplicationSquare310x310logo)
+			if meta.msapplicationNotification !== null
+				meta(name="msapplication-notification" content!=meta.msapplicationNotification)
+			if meta.msapplicationConfig !== null
+				meta(name="msapplication-config" content!=meta.msapplicationConfig)
+			if meta.themeColor !== null
+				meta(name="theme-color" content!=meta.themeColor)
+			if meta.formatDetection !== null && (typeof meta.formatDetection === 'string' || Object.values(meta.formatDetection).some(function (value) { return !value }))
+				meta(name="format-detection" content!=(typeof meta.formatDetection === 'string' ? meta.formatDetection : Object.entries(meta.formatDetection).filter(function (entry) { return !entry[1] || entry[1] === 'no' }).map(function (entry) { return `${entry[0]}=no` }).join(',')))
+		if title !== null
+			title!= title
+		block links
+			if link.appleTouchIconPrecomposed !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed)
+			if link.appleTouchIconPrecomposed40x40 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed40x40 sizes="40x40")
+			if link.appleTouchIconPrecomposed57x57 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed57x57 sizes="57x57")
+			if link.appleTouchIconPrecomposed58x58 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed58x58 sizes="58x58")
+			if link.appleTouchIconPrecomposed60x60 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed60x60 sizes="60x60")
+			if link.appleTouchIconPrecomposed72x72 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed72x72 sizes="72x72")
+			if link.appleTouchIconPrecomposed76x76 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed76x76 sizes="76x76")
+			if link.appleTouchIconPrecomposed80x80 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed80x80 sizes="80x80")
+			if link.appleTouchIconPrecomposed87x87 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed87x87 sizes="87x87")
+			if link.appleTouchIconPrecomposed114x114 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed114x114 sizes="114x114")
+			if link.appleTouchIconPrecomposed120x120 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed120x120 sizes="120x120")
+			if link.appleTouchIconPrecomposed144x144 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed144x144 sizes="144x144")
+			if link.appleTouchIconPrecomposed152x152 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed152x152 sizes="152x152")
+			if link.appleTouchIconPrecomposed167x167 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed167x167 sizes="167x167")
+			if link.appleTouchIconPrecomposed180x180 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed180x180 sizes="180x180")
+			if link.appleTouchIconPrecomposed1024x1024 !== null
+				link(rel="apple-touch-icon-precomposed" href!=link.appleTouchIconPrecomposed1024x1024 sizes="1024x1024")
+			if link.appleTouchIcon !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon)
+			if link.appleTouchIcon40x40 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon40x40 sizes="40x40")
+			if link.appleTouchIcon57x57 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon57x57 sizes="57x57")
+			if link.appleTouchIcon58x58 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon58x58 sizes="58x58")
+			if link.appleTouchIcon60x60 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon60x60 sizes="60x60")
+			if link.appleTouchIcon72x72 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon72x72 sizes="72x72")
+			if link.appleTouchIcon76x76 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon76x76 sizes="76x76")
+			if link.appleTouchIcon80x80 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon80x80 sizes="80x80")
+			if link.appleTouchIcon87x87 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon87x87 sizes="87x87")
+			if link.appleTouchIcon114x114 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon114x114 sizes="114x114")
+			if link.appleTouchIcon120x120 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon120x120 sizes="120x120")
+			if link.appleTouchIcon144x144 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon144x144 sizes="144x144")
+			if link.appleTouchIcon152x152 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon152x152 sizes="152x152")
+			if link.appleTouchIcon167x167 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon167x167 sizes="167x167")
+			if link.appleTouchIcon180x180 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon180x180 sizes="180x180")
+			if link.appleTouchIcon1024x1024 !== null
+				link(rel="apple-touch-icon" href!=link.appleTouchIcon1024x1024 sizes="1024x1024")
+			if link.icon !== null
+				link(rel="icon" href!=link.icon)
+			if link.icon16x16 !== null
+				link(rel="icon" href!=link.icon16x16 sizes="16x16")
+			if link.icon32x32 !== null
+				link(rel="icon" href!=link.icon32x32 sizes="32x32")
+			if link.icon96x96 !== null
+				link(rel="icon" href!=link.icon96x96 sizes="96x96")
+			if link.icon128x128 !== null
+				link(rel="icon" href!=link.icon128x128 sizes="128x128")
+			if link.icon192x192 !== null
+				link(rel="icon" href!=link.icon192x192 sizes="192x192")
+			if link.icon194x194 !== null
+				link(rel="icon" href!=link.icon194x194 sizes="194x194")
+			if link.icon196x196 !== null
+				link(rel="icon" href!=link.icon196x196 sizes="196x196")
+			if link.manifest !== null
+				link(rel="manifest" href!=link.manifest)
+			if link.maskIcon.href !== null
+				link(rel="mask-icon" href!=link.maskIcon.href color=link.maskIcon.color)
+		block styles
+			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+			script.
+				!function(n,e){"object"== typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.device = e() : n.device = e()}(window,function(){return function(n){var e={};function o(t){if(e[t])return e[t].exports;var r=e[t]={i:t,l:!1,exports:{}};return n[t].call(r.exports,r,r.exports,o),r.l=!0,r.exports}return o.m=n,o.c=e,o.d=function(n,e,t){o.o(n,e)||Object.defineProperty(n,e,{enumerable:!0,get:t})},o.r=function(n){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(n,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(n,"__esModule",{value:!0})},o.t=function(n,e){if(1&e&&(n=o(n)),8&e)return n;if(4&e&&"object"==typeof n&&n&&n.__esModule)return n;var t=Object.create(null);if(o.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:n}),2&e&&"string"!=typeof n)for(var r in n)o.d(t,r,function(e){return n[e]}.bind(null,r));return t},o.n=function(n){var e=n&&n.__esModule?function(){return n.default}:function(){return n};return o.d(e,"a",e),e},o.o=function(n,e){return Object.prototype.hasOwnProperty.call(n,e)},o.p="",o(o.s=0)}([function(n,e,o){n.exports=o(1)},function(n,e,o){"use strict";o.r(e);var t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(n){return typeof n}:function(n){return n&&"function"==typeof Symbol&&n.constructor===Symbol&&n!==Symbol.prototype?"symbol":typeof n},r=window.device,i={},a=[];window.device=i;var c=window.document.documentElement,d=window.navigator.userAgent.toLowerCase(),u=["googletv","viera","smarttv","internet.tv","netcast","nettv","appletv","boxee","kylo","roku","dlnadoc","pov_tv","hbbtv","ce-html"];function l(n,e){return-1!==n.indexOf(e)}function s(n){return l(d,n)}function f(n){return c.className.match(new RegExp(n,"i"))}function b(n){var e=null;f(n)||(e=c.className.replace(/^\s+|\s+$/g,""),c.className=e+" "+n)}function p(n){f(n)&&(c.className=c.className.replace(" "+n,""))}function w(){i.landscape()?(p("portrait"),b("landscape"),y("landscape")):(p("landscape"),b("portrait"),y("portrait")),v()}function y(n){for(var e=0;e<a.length;e++)a[e](n)}i.macos=function(){return s("mac")},i.ios=function(){return i.iphone()||i.ipod()||i.ipad()},i.iphone=function(){return!i.windows()&&s("iphone")},i.ipod=function(){return s("ipod")},i.ipad=function(){var n="MacIntel"===navigator.platform&&navigator.maxTouchPoints>1;return s("ipad")||n},i.android=function(){return!i.windows()&&s("android")},i.androidPhone=function(){return i.android()&&s("mobile")},i.androidTablet=function(){return i.android()&&!s("mobile")},i.blackberry=function(){return s("blackberry")||s("bb10")},i.blackberryPhone=function(){return i.blackberry()&&!s("tablet")},i.blackberryTablet=function(){return i.blackberry()&&s("tablet")},i.windows=function(){return s("windows")},i.windowsPhone=function(){return i.windows()&&s("phone")},i.windowsTablet=function(){return i.windows()&&s("touch")&&!i.windowsPhone()},i.fxos=function(){return(s("(mobile")||s("(tablet"))&&s(" rv:")},i.fxosPhone=function(){return i.fxos()&&s("mobile")},i.fxosTablet=function(){return i.fxos()&&s("tablet")},i.meego=function(){return s("meego")},i.cordova=function(){return window.cordova&&"file:"===location.protocol},i.nodeWebkit=function(){return"object"===t(window.process)},i.mobile=function(){return i.androidPhone()||i.iphone()||i.ipod()||i.windowsPhone()||i.blackberryPhone()||i.fxosPhone()||i.meego()},i.tablet=function(){return i.ipad()||i.androidTablet()||i.blackberryTablet()||i.windowsTablet()||i.fxosTablet()},i.desktop=function(){return!i.tablet()&&!i.mobile()},i.television=function(){for(var n=0;n<u.length;){if(s(u[n]))return!0;n++}return!1},i.portrait=function(){return screen.orientation&&Object.prototype.hasOwnProperty.call(window,"onorientationchange")?l(screen.orientation.type,"portrait"):i.ios()&&Object.prototype.hasOwnProperty.call(window,"orientation")?90!==Math.abs(window.orientation):window.innerHeight/window.innerWidth>1},i.landscape=function(){return screen.orientation&&Object.prototype.hasOwnProperty.call(window,"onorientationchange")?l(screen.orientation.type,"landscape"):i.ios()&&Object.prototype.hasOwnProperty.call(window,"orientation")?90===Math.abs(window.orientation):window.innerHeight/window.innerWidth<1},i.noConflict=function(){return window.device=r,this},i.ios()?i.ipad()?b("ios ipad tablet"):i.iphone()?b("ios iphone mobile"):i.ipod()&&b("ios ipod mobile"):i.macos()?b("macos desktop"):i.android()?i.androidTablet()?b("android tablet"):b("android mobile"):i.blackberry()?i.blackberryTablet()?b("blackberry tablet"):b("blackberry mobile"):i.windows()?i.windowsTablet()?b("windows tablet"):i.windowsPhone()?b("windows mobile"):b("windows desktop"):i.fxos()?i.fxosTablet()?b("fxos tablet"):b("fxos mobile"):i.meego()?b("meego mobile"):i.nodeWebkit()?b("node-webkit"):i.television()?b("television"):i.desktop()&&b("desktop"),i.cordova()&&b("cordova"),i.onChangeOrientation=function(n){"function"==typeof n&&a.push(n)};var m="resize";function h(n){for(var e=0;e<n.length;e++)if(i[n[e]]())return n[e];return"unknown"}function v(){i.orientation=h(["portrait","landscape"])}Object.prototype.hasOwnProperty.call(window,"onorientationchange")&&(m="orientationchange"),window.addEventListener?window.addEventListener(m,w,!1):window.attachEvent?window.attachEvent(m,w):window[m]=w,w(),i.type=h(["mobile","tablet","desktop"]),i.os=h(["ios","iphone","ipad","ipod","android","blackberry","macos","windows","fxos","meego","television"]),v(),e.default=i}]).default});
+				(function (m, a, d, vp) {var w = screen.width;if (device.ipad()) {document.getElementById(vp).setAttribute('content', 'width=' + d + ',initial-scale=' + (w / d).toFixed(2));}})(320, 1024, 1280, 'viewport');
+				var appConfig = {
+					'mobileVersion': false,
+					'desktopVersion': true,
+					'startupMessage': {
+						'title': false,
+						'message': false
+					}
+				};
+		block head-end
+	body(class=body.classList)&attributes(body.attrs)
+		block body-start
+		block content
+		block scripts
+			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
+			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+		block body-end

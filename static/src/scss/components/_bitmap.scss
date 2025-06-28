@@ -1,0 +1,282 @@
+.bitmap {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 56px;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.accordion {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		@media (max-width: $sm - 1) {
+			margin: 0 0 16px;
+		}
+	}
+
+	&__image {
+		order: -1;
+		margin: 0 0 32px;
+
+		img {
+			width: 100%;
+
+			@media (min-width: $sm) {
+				width: 592px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			order: 0;
+			margin: 0 0 0 137px;
+		}
+	}
+
+	&__content,
+	&__image {
+		.wow & {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 5;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				transition: 1.5s;
+			}
+		}
+
+		.wow.animated & {
+			&::before {
+				width: 0;
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+		margin-bottom: 120px;
+	}
+}
+
+.bitmap_img-left {
+	.bitmap {
+		&__image {
+			margin: 0 0 30px;
+
+			img {
+				width: 100%;
+
+				@media (min-width: $sm) {
+					width: 800px;
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin: 0 64px 0 0;
+			}
+		}
+
+		&__content {
+			margin-right: 0;
+
+			.btn {
+				margin-top: auto;
+				align-self: flex-start;
+			}
+		}
+	}
+}
+
+.bitmap_program {
+	.bitmap {
+		&__image {
+			margin: 0;
+
+			img {
+				width: 100%;
+
+				@media (min-width: $sm) {
+					width: 608px;
+				}
+			}
+		}
+
+		&__content {
+			margin-right: 0;
+			padding: 40px 32px 48px;
+			background: $color-whisper;
+
+			@media (min-width: $sm) {
+				padding: 80px 104px 78px 120px;
+			}
+		}
+	}
+
+	.link-arrow {
+		margin-top: 30px;
+	}
+}
+
+.bitmap_img-left-384 {
+	.bitmap {
+		&__image {
+			img {
+				@media (min-width: $sm) {
+					width: 384px;
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin: 0 32px 0 0;
+			}
+		}
+
+		&__content {
+			margin-right: 0;
+		}
+	}
+
+	h2 {
+		@media (min-width: $sm) {
+			margin: 0 0 24px;
+		}
+	}
+}
+
+.bitmap_img-right-384 {
+	.bitmap {
+		&__image {
+			img {
+				@media (min-width: $sm) {
+					width: 384px;
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin: 0 0 0 32px;
+			}
+		}
+	}
+
+	h2 {
+		@media (min-width: $sm) {
+			margin: 0 0 20px;
+		}
+	}
+}
+
+.bitmap_sire {
+	.bitmap {
+		&__image {
+			img {
+				height: 184px;
+				object-fit: cover;
+
+				@media (min-width: $sm) {
+					width: 696px;
+					height: auto;
+				}
+			}
+
+			@media (min-width: $sm) {
+				margin: 0 0 0 136px;
+			}
+		}
+	}
+}
+
+.bitmap_logic {
+	.bitmap {
+		&__image {
+			img {
+				@media (min-width: $sm) {
+					width: 696px;
+				}
+			}
+		}
+	}
+
+	h2 {
+		@media (min-width: $sm) {
+			margin: 0 0 32px;
+		}
+	}
+}
+
+.bitmap_row {
+	flex-wrap: wrap;
+
+	.bitmap__col {
+		width: 100%;
+
+		@media (min-width: $sm) {
+			padding: 0 120px;
+			width: 50%;
+		}
+	}
+
+	.bitmap__col + .bitmap__col {
+		@media (max-width: $sm - 1) {
+			margin-top: 56px;
+		}
+	}
+
+	.bitmap__item {
+		&__image {
+			margin-bottom: 40px;
+		}
+	}
+
+	.h2 {
+		margin: 0 0 24px;
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.bitmap__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .bitmap__col {
+				transition-delay: 0.5s;
+
+				+ .bitmap__col {
+					transition-delay: 0.65s;
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.bitmap__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}
+
+.bitmap_make {
+	.bitmap__image {
+		@media (min-width: $sm) {
+			margin: 0 96px 0 0;
+		}
+	}
+}

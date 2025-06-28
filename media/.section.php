@@ -1,0 +1,4 @@
+<?
+$sSectionName = "Медиа";
+$arDirProperties = array();
+?>

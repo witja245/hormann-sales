@@ -1,0 +1,34 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/aktsii/")
+					span(itemprop="name") Акции
+				meta(itemprop="position" content="2")
+	h1.h2.wow(data-wow-offset="200") Акции
+	.offers-list
+
+		each val in ["один", "два", "три"]
+
+			.li-item.wow(data-wow-offset="200")
+				a.li-item-image(href="#")
+					.full-img(style="background-image:url(./images/temp/95.jpg)")
+				.li-item-content
+					.c-date Акция до 1 августа
+					.c-header: a(href="#")= 'Ворота и двери года ' + val
+					.c-preview Краткое текстовое описание акции Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+					.c-button: a.btn(href="#"): span Прдробнее
+
+	.pagination.wow(data-wow-offset="200")
+		ul
+			li.hidden: a.pagination__prev(href="#")
+			li: a.is-active(href="#") 01
+			li: a(href="#") 02
+			li: a(href="#") 03
+			li: a(href="#") 04
+			li: a(href="#") 05
+			li: a.pagination__next(href="#")

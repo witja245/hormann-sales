@@ -1,0 +1,72 @@
+.advises {
+
+	.adv-tiles {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin-left: -32px;
+		.adv-tile {
+			margin: 0 0 72px 32px;
+			.at-img {
+				width: 384px;
+				height: 244px;
+				position: relative;
+				img {
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
+				span {
+					position: absolute;
+					top: 32px;
+					left: 32px;
+
+				}
+			}
+			.at-txt {
+				p {
+					@include f(18px, 24px);
+					width: 384px;
+
+				}
+			}
+		}
+
+		&.wow {
+			opacity: 0;
+			transition: 0.5s;
+
+			.adv-tile {
+				opacity: 0;
+				transform: translateY(35px);
+				transition: transform 0.5s, opacity 0.5s;
+				transition-delay: 0.35s;
+
+				+ .adv-tile {
+					transition-delay: 0.5s;
+
+					+ .adv-tile {
+						transition-delay: 0.65s;
+
+						+ .adv-tile {
+							transition-delay: 0.75s;
+
+							+ .adv-tile {
+								transition-delay: 0.85s;
+							}
+						}
+					}
+				}
+			}
+
+			&.animated {
+				opacity: 1;
+
+				.adv-tile {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}

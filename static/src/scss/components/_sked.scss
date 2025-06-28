@@ -1,0 +1,112 @@
+.sked {
+	margin-bottom: 26px;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+	}
+
+	&__col {
+		margin-bottom: 30px;
+		padding: 0 15px;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			width: 33.33334%;
+		}
+	}
+
+	&__item {
+		display: flex;
+		padding: 20px;
+		height: 240px;
+		background: 50% 50% no-repeat;
+		background-size: cover;
+
+		&__text {
+			align-self: flex-end;
+			padding: 0 5px;
+			font-size: 14px;
+			background: $color-white;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		height: 100%;
+		background: $color-whisper;
+
+		.subtext {
+			margin-bottom: 20px;
+			font-weight: 700;
+		}
+
+		&__row {
+			display: flex;
+		}
+
+		&__email {
+			margin-left: auto;
+
+			@media (min-width: $sm) {
+				margin-left: 40px;
+			}
+		}
+
+		&__link {
+			margin-top: 20px;
+
+			@media (min-width: $sm) {
+				margin-top: auto;
+			}
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.sked__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .sked__col {
+				transition-delay: 0.5s;
+
+				+ .sked__col {
+					transition-delay: 0.65s;
+
+					+ .sked__col {
+						transition-delay: 0.75s;
+
+						+ .sked__col {
+							transition-delay: 0.85s;
+
+							+ .sked__col {
+								transition-delay: 0.95s;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.sked__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+	}
+}

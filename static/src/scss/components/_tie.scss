@@ -1,0 +1,76 @@
+.tie {
+	margin-bottom: 36px;
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+	}
+
+	&__col {
+		margin-bottom: 20px;
+		padding: 0 16px;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			margin-bottom: 0;
+			width: 33.33334%;
+		}
+	}
+
+	&__item {
+		display: block;
+		height: 100%;
+		border-radius: 4px;
+		padding: 30px;
+		color: $color-white;
+		background: $color-rolling-stone;
+		transition: $animation-speed;
+
+		.title-text {
+			margin-bottom: 15px;
+		}
+
+		&:hover {
+			color: $color-white;
+			background: $color-regal-blue;
+		}
+
+		@media (min-width: $sm) {
+			padding: 40px 30px;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transition: 0.5s;
+
+		.tie__col {
+			opacity: 0;
+			transform: translateY(35px);
+			transition: transform 0.5s, opacity 0.5s;
+			transition-delay: 0.35s;
+
+			+ .tie__col {
+				transition-delay: 0.5s;
+
+				+ .tie__col {
+					transition-delay: 0.65s;
+				}
+			}
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.tie__col {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+	}
+}

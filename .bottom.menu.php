@@ -1,0 +1,89 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Гаражные ворота", 
+		"/products/garazhnye-vorota/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Входные двери", 
+		"/products/vkhodnye-dveri/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Автоматика для ворот", 
+		"/products/avtomatika-dlya-vorot/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Промышленные ворота", 
+		"/products/promyshlennye-vorota/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Перегрузочное оборудование", 
+		"/products/peregruzochnoe-oborudovanie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Система контроля въезда", 
+		"/products/sistemy-kontrolya-vezda/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Сервис", 
+		"/business/service/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Портфолио", 
+		"/portfolio/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Архитекторам", 
+		"/architect/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Дилерам", 
+		"/for-dealers/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+    /*
+	Array(
+		"Калькулятор", 
+		"/kalkulyator/", 
+		Array(), 
+		Array(), 
+		"" 
+	)*/
+);
+?>

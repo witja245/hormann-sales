@@ -1,0 +1,243 @@
+.contacts {
+	margin-bottom: 56px;
+
+	.form__radio {
+		margin-bottom: 32px;
+
+		label + label {
+			margin-left: 32px;
+		}
+
+		@media (min-width: $sm) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__list {
+		position: relative;
+
+		&__scroll {
+			overflow: auto;
+			padding-right: 20px;
+			max-height: 544px;
+
+			&::-webkit-scrollbar {
+				width: 2px;
+				height: 2px;
+				background-color: $color-alto;
+			}
+
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $color-regal-blue;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			margin-right: 40px;
+			width: 383px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 58px;
+
+		&__name {
+			margin-bottom: 8px;
+			color: $color-regal-blue;
+
+			span {
+				display: block;
+				font-weight: 700;
+			}
+		}
+
+		&__type {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 24px;
+			font-weight: 700;
+			font-size: 12px;
+			color: $color-rolling-stone;
+
+			span {
+				display: inline-block;
+				margin-right: 16px;
+			}
+		}
+
+		&__plan {
+			display: flex;
+			margin: 24px 0;
+
+			a {
+				display: flex;
+				align-items: center;
+
+				svg {
+					margin-right: 8px;
+					display: block;
+					width: 28px;
+					height: 24px;
+					fill: none;
+				}
+			}
+
+			a + a {
+				margin-left: 32px;
+			}
+		}
+
+		&__adress {
+			font-size: 14px;
+			line-height: 19px;
+
+			&__title {
+				margin-bottom: 7px;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			ul {
+				li {
+					display: flex;
+				}
+			}
+
+			&__margin-li {
+				margin-bottom: 10px;
+			}
+
+			&__label {
+				flex-shrink: 0;
+				margin-right: 25px;
+				width: 60px;
+			}
+
+			& + & {
+				margin-top: 14px;
+			}
+		}
+
+		&__adress_margin {
+			margin-bottom: 24px;
+		}
+
+		&__image {
+			display: flex;
+
+			a {
+				position: relative;
+				display: block;
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 11;
+					width: 100%;
+					height: 100%;
+					background: rgba(38, 38, 38, 0.370138);
+					opacity: 0;
+					transition: $animation-speed;
+				}
+
+				img {
+					width: 136px;
+				}
+
+				&:hover {
+					&::before {
+						opacity: 1;
+					}
+				}
+			}
+
+			a + a {
+				margin-left: 16px;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__map {
+		width: 100%;
+
+		@media (max-width: $sm - 1) {
+			order: -1;
+			margin-bottom: 32px;
+			height: 379px;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+	}
+}
+
+a.contacts-city {
+	position: relative;
+	margin-left: 7px;
+	padding-right: 20px;
+	color: $color-regal-blue;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 9px;
+		border-right: 2px solid $color-regal-blue;
+		border-bottom: 2px solid $color-regal-blue;
+		width: 10px;
+		height: 10px;
+		transform: rotate(45deg);
+		transition: $animation-speed;
+
+		@media (min-width: $sm) {
+			bottom: 20px;
+			width: 15px;
+			height: 15px;
+		}
+	}
+
+	&:hover {
+		color: $color-midnight-blue;
+
+		&::after {
+			border-color: $color-midnight-blue;
+		}
+	}
+
+	@media (min-width: $sm) {
+		padding-right: 35px;
+	}
+}

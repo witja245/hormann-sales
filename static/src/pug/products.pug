@@ -1,0 +1,176 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/produktsiya/")
+					span(itemprop="name") Продукция
+				meta(itemprop="position" content="2")
+	h1.h2.margin-32.wow(data-wow-offset='200') Продукция Hörmann
+	.text.width-700.margin-72.wow(data-wow-offset='200')
+		| Качество или инновации, безопасность или дизайн — продукция Hörmann превосходит все ожидания. Мы не знаем компромиссов. Наши клиенты знают это. И доверяют нам уже многие десятилетия.
+	.products
+		.products__row
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/90.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Гаражные ворота
+						.text
+							a(href="#") Cекционные ворота
+							a(href="#") Рулонные ворота
+							a(href="#") Откатные  секционные ворота
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/91.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Входные двери
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/92.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Межкомнатные двери
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/90.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Умный дом Hörmann
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/92.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Специальные двери
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/90.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Гаражные ворота
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/91.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Приводы
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/90.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Гаражные ворота
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/92.jpg" alt="")
+					.products__item__content
+						.title-text
+							a(href="#") Гаражные ворота
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+			.products__col
+				.products__item.wow(data-wow-offset='200')
+					.products__item__image
+						img(src="./images/temp/90.jpg" alt="")
+					.products__item__content
+						.title-text Гаражные ворота
+						.text
+							a(href="#") Thermo 65
+							a(href="#") Название модели
+							a(href="#") Длинное название модели
+							a(href="#") Длинное название модели
+	form.form.wow(data-wow-offset='200' action="./ajax/test.json" method="get" data-app="form")
+		.form__box
+			.title-text Не нашли нужный товар? Спросите у специалиста
+			.form__row.form__row_width-33
+				.form__col
+					.form__input
+						.form__label
+							| Ваше имя
+						.form__field
+							input(type="text" name="name" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Телефон
+						.form__field
+							input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__col
+					.form__input
+						.form__label
+							| Email
+						.form__field
+							input(type="email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+			.form__input
+				.form__label
+					| Расскажите о компании
+				.form__field
+					textarea(name="subject" data-validation={
+						maxlength: 2000,
+					} required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

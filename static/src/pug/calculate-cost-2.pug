@@ -1,0 +1,129 @@
+.container
+	form.form.form-no-bg(action="./ajax/test.json" method="get" data-app="form")
+		.title-row
+			h1.h2 Рассчитать стоимость
+			.select(data-app="select")
+				select()
+					option(value="1") Гаражный ворот
+					option(value="2") Гаражных дверей
+					option(value="3") Входных дверей
+					option(value="4") Межкомнатных дверей
+		.form__box.margin-72
+			.title-text
+				| О проекте
+			.form__input
+				.form__label
+					| Для какого объекта нужны ворота?
+				.select(data-app="select")
+					select()
+						option()
+						option(value="2") Частный гараж
+						option(value="3") Парковка
+						option(value="4") Промышленное здание
+						option(value="5") Другое
+			.form__input
+				.form__label
+					| Расскажите о вашем объекте, опишите задачу. Какие особенности?
+				.form__field
+					textarea()
+				.form__file
+					label
+						input(type="file" name="file" multiple)
+						.form__file__title(data-text="Файл не выбран" data-multiple="Выбрано файлов:")
+							| Приложите файл
+						.form__file__text Схемы, описания, изображения объекта
+		.title-text
+			| Параметры ворот
+		.form-image.margin-72
+			.form-image__left
+				.form__row
+					.form__col
+						.form__input
+							.form__label
+								| Количество дверей
+							.form__field
+								input(type="text")
+				.form__row
+					.form__col
+						.form__input
+							.form__label
+								| Ширина ворот – A
+							.form__field
+								input(type="text")
+								.form__field__sm
+									| см
+					.form__col
+						.form__input
+							.form__label
+								| Высота ворот – B
+							.form__field
+								input(type="text")
+								.form__field__sm
+									| см
+			.form-image__right
+				img(src="./images/temp/93.jpg" alt="")
+		.form__box
+			.title-text Контактные данные
+			.form__radio
+				label
+					input(type="radio" name="form")
+					i
+					span Частное лицо
+				label
+					input(type="radio" name="form")
+					i
+					span Архитектор
+				label
+					input(type="radio" name="form")
+					i
+					span Заказчик
+				label
+					input(type="radio" name="form" checked)
+					i
+					span Строительная организация
+				label
+					input(type="radio" name="form")
+					i
+					span Другое
+			.form__row.form__row_width-50
+				.form__col
+					.form__input
+						.form__label
+							| Ваше имя
+						.form__field
+							input(type="text" name="name" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Город
+						.form__field
+							input(type="text" name="city" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Телефон
+						.form__field
+							input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__col
+					.form__input
+						.form__label
+							| Email
+						.form__field
+							input(type="email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

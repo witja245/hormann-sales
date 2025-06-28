@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @param {Bool} $self [false] - Whether or not to include current selector
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &::before { content: " "; display: table; }
+  &::after { content: " "; display: table; }
+  &::after { clear: both; }
+}
+
+@mixin text-whith-ellipsis($font-size, $line-height, $lines-to-show) {
+  display: block;
+    display: -webkit-box;
+    height: calc(#{$lines-to-show} * #{$line-height});
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin centerIt($position) {
+  position: $position;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+@mixin centerItHorizintal($position) {
+  position: $position;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+@mixin font($color, $size, $lh){
+  font-size: $size;
+  color: $color;
+  line-height: $lh;
+};
+
+@mixin f($size, $lh, $weight:0, $style:0){
+  font-size: $size;
+  line-height: $lh;
+  @if $weight != 0 {
+    font-weight: $weight;
+  }
+  @if $style != 0 {
+    font-style: $style;
+  }
+}
+
+// grid
+
+@mixin is-grid($cols:4,$gap:40,$debug:0) {
+  $halfGap: $gap/2;
+  .is-grid {
+    position: relative;
+    width: auto;
+    margin-left: #{($gap / -2)}px;
+    margin-right: #{($gap / -2)}px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    @if $debug == 1 {
+      &:before {
+        pointer-events: none;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: #{($gap / 2)}px;
+        right: #{($gap / 2)}px;
+        background: rgba(255,0,0,.2);
+      }
+    }
+  }
+  .is-grid__item {
+    position: relative;
+    display: block;
+    width: calc((100% - #{$gap * $cols}px) / #{$cols});
+    margin-left: #{$halfGap}px;
+    margin-right: #{$halfGap}px;
+    margin-bottom: #{$gap}px;
+    @if $debug == 1 { box-shadow: inset 0 0 0 1px red; }
+    body.IE & {
+      width: calc(100% / #{$cols} - #{$gap + 1}px);
+    }
+    body.msEdge & {
+      width: calc(100% / #{$cols} - #{$gap + 1}px);
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 320px) and (max-width: 667px) and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-width: 320px) and (max-width: 667px) and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-width: 320px) and (max-width: 736px) and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min-width: 320px) and (max-width: 736px) and (min--moz-device-pixel-ratio: 3),
+  only screen and (min-width: 320px) and (max-width: 812px) and (-webkit-device-pixel-ratio : 3),
+  only screen and (min-width: 320px) and (max-width: 736px) and (-o-min-device-pixel-ratio: 6/2) {
+    .is-grid__item {
+      margin-bottom: #{$halfGap}px;
+    }
+  }
+
+}
+

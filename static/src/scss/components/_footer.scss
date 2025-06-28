@@ -1,0 +1,295 @@
+.is-footer {
+	background-color: #fff;
+	margin: 75px -20px 0;
+	border-top: 1px solid #F2F3F8;
+	font-family: $font-family-roboto-condensed;
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+
+		& > * {
+			box-sizing: border-box;
+
+			@media (min-width: $sm) {
+				padding-top: 64px;
+				padding-bottom: 48px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+			margin-bottom: 0;
+		}
+	}
+
+	&__info {
+		order: -1;
+		border-bottom: 1px solid #ECECEC;
+		margin-bottom: 40px;
+		width: 100%;
+
+		ul {
+			display: flex;
+
+			li {
+				width: 33.33334%;
+
+				+ li {
+					border-left: 1px solid #ECECEC;
+				}
+
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					padding: 23px 7px 27px;
+					font-size: 14px;
+					line-height: 18px;
+
+					svg {
+						display: block;
+						margin-bottom: 12px;
+						width: 16px;
+						height: 19px;
+					}
+				}
+			}
+		}
+
+		&_date {
+			font-size: 12px;
+			color: rgba($color-mine-shaft, 0.5);
+		}
+
+		@media (min-width: $sm) {
+			display: none;
+		}
+	}
+
+	&__left {
+		width: 100%;
+		text-align: center;
+
+		@media (min-width: $sm) {
+			width: 268px;
+			text-align: left;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 25px;
+
+		ul {
+			display: flex;
+
+			li {
+				+ li {
+					margin-left: 8px;
+				}
+			}
+		}
+
+		a {
+			display: block;
+
+			svg {
+				display: block;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			display: none;
+		}
+	}
+
+	&__center {
+		flex-grow: 1;
+		border-left: 1px solid #F2F3F8;
+		border-right: 1px solid #F2F3F8;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+		padding: 0 20px;
+		order: -1;
+
+		.is-footer__nav + .is-footer__nav {
+			border-top: 1px solid #ECECEC;
+
+			@media (min-width: $sm) {
+				border-top: none;
+				margin-left: 64px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			order: 0;
+			flex-wrap: nowrap;
+			margin-bottom: 0;
+			padding: 64px 0 48px 76px;
+		}
+	}
+
+	&__nav {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			width: 248px;
+		}
+	}
+
+	&__nav-item {
+		display: block;
+		list-style: none;
+
+		& + & {
+			border-top: 1px solid #ECECEC;
+
+			@media (min-width: $sm) {
+				border-top: none;
+				margin-top: 16px;
+			}
+		}
+
+		@media (max-width: $sm - 1) {
+			padding: 8px 0;
+		}
+	}
+
+	&__nav-text {
+		color: $text-color;
+		font-size: 18px;
+		line-height: 24px;
+		&:hover {
+			color: $brand-color;
+		}
+	}
+
+	&__right {
+		width: 268px;
+		padding-left: 60px;
+
+		@media (max-width: $sm - 1) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 24px;
+	}
+
+	&__l-contacts {
+		.tm {
+			font-size: 14px;
+			line-height: 18px;
+			display: block;
+		}
+		.address {
+			color: #797C80;
+			display: block;
+			margin-top: 8px;
+		}
+	}
+
+	&__r-contacts {
+		.phone {
+			font-size: 30px;
+			line-height: 32px;
+			white-space: nowrap;
+			color: $text-color;
+			&:hover {
+				color: $brand-color;
+			}
+		}
+		.scedule {
+			display: block;
+			white-space: nowrap;
+			margin: 8px 0 24px;
+		}
+	}
+
+	&__r-actions {
+		display: inline-block;
+		white-space: nowrap;
+		color: $text-color;
+		font-size: 16px;
+		& > span {
+			margin-left: 4px;
+		}
+		&:hover {
+			color: $brand-color;
+		}
+		& + & {
+			margin-top: 8px;
+		}
+	}
+
+	&__social {
+		margin-top: 24px;
+	}
+
+	&__bottom {
+		padding: 32px 0 24px;
+		background-color: #F2F3F8;
+		.item {
+			display: inline-block;
+			@include font(#797C80, 14px, 16px);
+			&:hover {
+				color: $brand-color;
+			}
+		}
+
+		@media (min-width: $sm) {
+			padding: 20px 0;
+		}
+	}
+
+	&__b-cont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 0;
+
+		@media (min-width: $sm) {
+			flex-direction: row;
+		}
+	}
+
+	&__b-main {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 32px;
+		text-align: center;
+
+		.item + .item	{
+			margin: 24px 0 0;
+
+			@media (min-width: $sm) {
+				margin: 0 0 0 16px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-direction: row;
+			margin-bottom: 0;
+		}
+	}
+
+	&__b-right {
+
+	}
+
+	@media (min-width: $sm) {
+		margin: 120px 0 0;
+	}
+}

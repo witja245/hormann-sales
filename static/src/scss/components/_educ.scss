@@ -1,0 +1,71 @@
+.educ {
+	margin-bottom: 56px;
+
+	h2 {
+		margin: 0 0 32px;
+		max-width: 480px;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 10;
+		margin: 0 0 32px;
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			margin: 0 35px 0 0;
+			width: 381px;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		min-width: 0;
+		width: 100%;
+
+		.swiper-slide {
+			@media (max-width: $sm - 1) {
+				width: 251px;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: 5;
+			right: 100%;
+			width: 100vh;
+			height: 100%;
+			background: $color-white;
+		}
+
+		.swiper-container {
+			overflow: visible;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $sm) {
+		margin-bottom: 120px;
+	}
+}

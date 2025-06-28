@@ -1,0 +1,33 @@
+.hidden
+	form.modal.modal-geo#geo(action="#" data-app="geo")
+		.h2 Выбранный филиал: #[span Санкт-Петербург]
+		.modal__select(data-search="1" data-geo="./ajax/geo.json")
+			select()
+				option(value="?change-city=Москва") Москва
+				option(value="?change-city=Санкт-Петербург") Санкт-Петербург
+				option(value="?change-city=Владивосток") Владивосток
+				option(value="?change-city=Иркутск") Иркутск
+				option(value="?change-city=Краснодар") Краснодар
+		.title-text
+			| Филиалы Hoermann в России
+		.modal__city
+			a(href="#") Москва
+		.modal__citys
+			ul
+				li: a(href="#") Москва
+				li: a(href="#") Санкт-Петербург
+				li: a(href="#") Владивосток
+				li: a(href="#") Иркутск
+				li: a(href="#") Краснодар
+			ul
+				li: a(href="#") Красноярск
+				li: a(href="#") Новосибирск
+				li: a(href="#") Улан-Удэ
+				li: a(href="#") Уфа
+				li: a(href="#") Хабаровск
+			ul
+				li: a(href="#") Красноярск
+				li: a(href="#") Новосибирск
+				li: a(href="#") Улан-Удэ
+				li: a(href="#") Уфа
+				li: a(href="#") Хабаровск

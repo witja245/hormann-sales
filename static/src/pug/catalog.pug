@@ -1,0 +1,510 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Продукция
+				meta(itemprop="position" content="2")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/garazhnyye-vorota/")
+					span(itemprop="name") Гаражные ворота
+				meta(itemprop="position" content="3")
+	h1.h2 Гаражные секционные ворота
+	.catalog
+		.catalog__filter(data-app="catalog-filter")
+			.catalog__filter__row
+				.catalog__filter__btn
+					button.btn.btn_white(type="button") Популярное
+					button.btn.btn_white(type="button") Дизайн
+					button.btn.btn_white(type="button") Акции
+					button.btn.btn-parameters(type="button")
+						+svg('parameters')
+						span Выбрать по параметрам
+				.catalog__filter__links
+					a(href="#")
+						+svg('gear')
+						span Конфигуратор
+					a(href="#")
+						+svg('simile')
+						span Сравнение моделей
+			.catalog__filter__drop
+				.catalog__filter__option
+					button(type="button" data-target="1")
+						| Материал:
+						span Любой
+					button(type="button" data-target="2")
+						| Гофр:
+						span Любой
+					button(type="button" data-target="3")
+						| Поверхность:
+						span Любая
+					.checkbox
+						label
+							input(type="checkbox")
+							i
+							span Энергосберегающие
+					.color
+						span Цвет:
+						label(style="background: #FFFFFF;").color-white
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #E5E3E3;")
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #CAB293;")
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #E7C38F;")
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #F19106;")
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #B5441A;")
+							input(type="radio" name="filter-color")
+							i
+						label(style="background: #522C20;")
+							input(type="radio" name="filter-color" checked)
+							i
+						label
+							input(type="radio" name="filter-color" checked)
+							img(src="./images/colors/green.jpg")
+							i
+				.catalog__filter__opt(data-item="1")
+					.radio
+						label
+							input(type="radio" name="material")
+							i
+							span Любой
+					.radio
+						label
+							input(type="radio" name="material" checked)
+							i
+							span Массив дерева
+					.radio
+						label
+							input(type="radio" name="material")
+							i
+							span Сталь
+					.radio
+						label
+							input(type="radio" name="material")
+							i
+							span Алюминий
+					button.btn.btn_white(type="button") Применить
+				.catalog__filter__opt(data-item="2")
+					.radio
+						label
+							input(type="radio" name="corrugation" checked)
+							i
+							span Любой
+					.radio
+						label
+							input(type="radio" name="corrugation")
+							i
+							span Массив дерева
+					.radio
+						label
+							input(type="radio" name="corrugation")
+							i
+							span Сталь
+					.radio
+						label
+							input(type="radio" name="corrugation")
+							i
+							span Алюминий
+					button.btn.btn_white(type="button") Применить
+				.catalog__filter__opt(data-item="3")
+					.radio
+						label
+							input(type="radio" name="surface" checked)
+							i
+							span Любой
+					.radio
+						label
+							input(type="radio" name="surface")
+							i
+							span Массив дерева
+					.radio
+						label
+							input(type="radio" name="surface")
+							i
+							span Сталь
+					.radio
+						label
+							input(type="radio" name="surface")
+							i
+							span Алюминий
+					button.btn.btn_white(type="button") Применить
+
+		.catalog__list
+			.catalog__row
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/1.jpg" alt="")
+							.catalog__item__action Новинка
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span M-гофр] Decograin
+								.catalog__item__colour
+									| Ночной дуб
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/2.jpg" alt="")
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span L-гофр] Decograin
+								.catalog__item__colour
+									| Красное дерево
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									llabel(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									llabel(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									abel(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/3.jpg" alt="")
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span S-гофр] Woodgrain
+								.catalog__item__colour
+									| Белый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/3.jpg" alt="")
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span S-гофр] Woodgrain
+								.catalog__item__colour
+									| Белый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/1.jpg" alt="")
+							.catalog__item__order Под заказ
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span M-гофр] Decograin
+								.catalog__item__colour
+									| Ночной дуб
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/4.jpg" alt="")
+							.catalog__item__action Акция
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span L-гофр] Woodgrain
+								.catalog__item__colour
+									| Бежевый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/3.jpg" alt="")
+							.catalog__item__action Новинка
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span M-гофр] Decograin
+								.catalog__item__colour
+									| Белый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/5.jpg" alt="")
+							.catalog__item__action Новинка
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span L-гофр] Decograin
+								.catalog__item__colour
+									| Бордовый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+				.catalog__col
+					.catalog__item
+						.catalog__item__image
+							img(src="./images/temp/3.jpg" alt="")
+						.catalog__item__content
+							.catalog__item__row
+								.catalog__item__name
+									| #[span S-гофр] Woodgrain
+								.catalog__item__colour
+									| Белый
+							.catalog__item__hover
+								.catalog__item__desc
+									| Любой цвет под заказ
+								.color
+									label(style="background: #FFFFFF;").color-white
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E5E3E3;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #CAB293;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #E7C38F;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #F19106;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #B5441A;")
+										input(type="radio" name="item-color")
+										i
+									label(style="background: #522C20;")
+										input(type="radio" name="item-color" checked)
+										i
+									label
+										input(type="radio" name="item-color" checked)
+										img(src="./images/colors/green.jpg")
+										i
+		.pagination
+			ul
+				li.hidden: a.pagination__prev(href="#")
+				li: a.is-active(href="#") 01
+				li: a(href="#") 02
+				li: a(href="#") 03
+				li: a(href="#") 04
+				li: a(href="#") 05
+				li: a.pagination__next(href="#")

@@ -1,0 +1,175 @@
+.upper.wow(data-wow-offset='200' style="background-image:url(./images/temp/77.jpg)")
+	.container
+		.breadcrumbs
+			ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					a(itemprop="item" href="#")
+						span(itemprop="name") Главная
+					meta(itemprop="position" content="1")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/arkhitektoram/")
+						span(itemprop="name") Архитекторам
+					meta(itemprop="position" content="2")
+		.upper__content
+			h1 Заголовок баннера для&nbsp;акции
+			.upper__text
+				| Краткое описание предложения/ #[br]акции/преимущества #[br]для архитекторов
+.container.container_width-1038
+	.edge.wow(data-app="edge" data-wow-offset="200")
+		.edge__box
+			.edge__content
+				h2 Hörmann#[br]для архитекторов
+				.text
+					| Воспользуйтесь know-how, которые мы нарабатывали десятилетиями — наши консультанты в области архитектуры и строительства окажут Вам поддержку начиная со стадии планирования объекта, при выяснении технических деталей и вплоть до сдачи-приемки строительного объекта. Наши специалисты с удовольствием проконсультируют Вас и ответят на Ваши вопросы.
+				.link-icon
+					a(href="#")
+						+svg('book').link-icon_width-24
+						span Контакты для архитекторов
+			.edge__slider
+				.edge__number
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.subtext
+									| 01
+							.swiper-slide
+								.subtext
+									| 02
+							.swiper-slide
+								.subtext
+									| 03
+				.edge__inner
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/75.png" alt="")
+									.edge__inner__content
+										.subtext
+											| BIM материалы
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+.container
+	.doc.wow(data-wow-offset="200")
+		.doc__item
+			.title-text
+				| Выберите продукцию
+			.text
+				| Краткий текст о продукции... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+			a.btn(href="#")
+				span Перейти в каталог
+		.doc__item
+			.title-text
+				| Скачайте документацию
+			.text
+				| Краткий поясняющий текст о том, что у нас есть все необходимые каталоги и инструкции... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+			a.btn(href="#")
+				span Смотреть документы
+	.bitmap.bitmap_program.wow(data-wow-offset="200")
+		.bitmap__image
+			img(src="./images/temp/76.jpg" alt="")
+		.bitmap__content
+			.title-text
+				| Проектируйте в нашей программе
+			.text
+				| Краткий текст о программе... С помощью Программы для архитекторов Hörmann Вы сможете легко и удобно, всего в несколько кликов составлять индивидуальные описания изделий, а также использовать чертежи продукции Hörmann. Благодаря современному и удобному для пользователя графическому интерфейсу планирование изделий Hörmann стало еще проще.
+			.link-arrow
+				a(href="#") Подробнее о программе
+	.magazine.wow(data-wow-offset="200")
+		.magazine__content
+			.title-text
+				| Читайте журнал Portal
+			.text
+				| PORTAL – журнал для архитекторов Hörmann с интересными отчетами о проектах известных архитекторов выходит три раза в год.
+			a.btn(href="#")
+				span Все выпуски журнала
+		.magazine__image
+			img(src="./images/temp/77.png" alt="")
+	form.form.wow(data-wow-offset='200' action="./ajax/test.json" method="get" data-app="form")
+		.form__box
+			.title-text
+				| Стать партнером
+			.form__row.form__row_width-33
+				.form__col
+					.form__input
+						.form__label
+							| Ваше имя
+						.form__field
+							input(type="text" name="name" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Компания
+						.form__field
+							input(type="text" name="text" data-validation={
+								maxlength: 300
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Город
+						.form__field
+							input(type="text" name="city" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Телефон
+						.form__field
+							input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__col
+					.form__input
+						.form__label
+							| Email
+						.form__field
+							input(type="email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Сайт компании
+						.form__field
+							input(type="text" name="site" data-validation={
+								maxlength: 300
+							} required)
+			.form__input
+				.form__label
+					| Расскажите о компании
+				.form__field
+					textarea(name="subject" data-validation={
+						maxlength: 2000,
+					}  required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

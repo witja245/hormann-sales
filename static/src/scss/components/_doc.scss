@@ -1,0 +1,57 @@
+.doc {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 56px;
+	border: 1px solid $color-alto;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding: 40px 32px;
+		width: 100%;
+
+		.text {
+			margin-bottom: 32px;
+
+			@media (min-width: $sm) {
+				margin-bottom: 55px;
+			}
+		}
+
+		.btn {
+			align-self: flex-start;
+			margin-top: auto;
+		}
+
+		& + & {
+			border-top: 1px solid $color-alto;
+
+			@media (min-width: $sm) {
+				border-top: none;
+				border-left: 1px solid $color-alto;
+			}
+		}
+
+		@media (min-width: $sm) {
+			padding: 94px 115px 88px 105px;
+			width: 50%;
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+		margin-bottom: 120px;
+	}
+}

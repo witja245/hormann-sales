@@ -1,0 +1,132 @@
+.container
+	.breadcrumbs
+		ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a(itemprop="item" href="#")
+					span(itemprop="name") Главная
+				meta(itemprop="position" content="1")
+			li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/dileram/")
+					span(itemprop="name") Дилерам
+				meta(itemprop="position" content="2")
+	.edge.wow(data-app="edge" data-wow-offset="200")
+		.edge__box
+			.edge__content
+				h1.h2 Дилерам
+				.text
+					| Небольшой текст о том, как мы работаем с дилерами... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+			.edge__slider
+				.edge__number
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.subtext
+									| 01
+							.swiper-slide
+								.subtext
+									| 02
+							.swiper-slide
+								.subtext
+									| 03
+				.edge__inner
+					.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/40.png" alt="")
+									.edge__inner__content
+										.subtext
+											| Ваши контакты на нашем сайте
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/40.png" alt="")
+									.edge__inner__content
+										.subtext
+											| Предоставляем все каталоги
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+							.swiper-slide
+								.edge__inner__row
+									.edge__inner__img
+										img(src="./images/temp/40.png" alt="")
+									.edge__inner__content
+										.subtext
+											| Название преимущества для дилера
+										.text
+											| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+	h2.wow(data-wow-offset="200") Как стать дилером
+	.text.width-605.margin-72.wow(data-wow-offset="200")
+		| Краткий поясняющий текст о том, как стать дилером... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+	form.form.wow(data-wow-offset='200' action="./ajax/test.json" method="get" data-app="form")
+		.form__box
+			.title-text
+				a(href="#") Свяжитесь с нами
+			.form__row.form__row_width-33
+				.form__col
+					.form__input
+						.form__label
+							| Ваше имя
+						.form__field
+							input(type="text" name="name" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Компания
+						.form__field
+							input(type="text" name="text" data-validation={
+								maxlength: 300
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Город
+						.form__field
+							input(type="text" name="city" data-validation={
+								regex: ['^[a-zA-Zа-яА-Я\\s]+$', 'ig'],
+								maxlength: 300,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Телефон
+						.form__field
+							input(type="tel" placeholder="+7 (___) ___ __-__" data-app="mask" data-mask="+7 (999) 999 99-99" inputmode="text" name="tel" required)
+				.form__col
+					.form__input
+						.form__label
+							| Email
+						.form__field
+							input(type="email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+				.form__col
+					.form__input
+						.form__label
+							| Сайт компании (если есть)
+						.form__field
+							input(type="text" name="site" data-validation={
+								maxlength: 300
+							} required)
+			.form__input
+				.form__label
+					| Сообщение
+				.form__field
+					textarea(name="subject" data-validation={
+						maxlength: 2000,
+					} required)
+			.form__submit
+				button.btn(type="submit")
+					span Отправить
+				.checkbox
+					label
+						input(type="checkbox" name="checkbox" required)
+						i
+						span Я ознакомлен и согласен с условиями сбора и обработки персональных данных в рамках #[a(href="#") Политики конфиденциальности]

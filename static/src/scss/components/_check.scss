@@ -1,0 +1,76 @@
+.check {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 56px;
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		border: 1px solid $color-alto;
+		padding: 30px;
+		width: 100%;
+
+		@media (min-width: $sm) {
+			flex-wrap: nowrap;
+			padding: 50px;
+			border-right: none;
+		}
+	}
+
+	&__title {
+		margin: 0 0 20px;
+
+		@media (min-width: $sm) {
+			max-width: 180px;
+			margin: 0 80px 0 0;
+		}
+	}
+
+	.radio {
+		margin-bottom: 10px;
+		font-size: 18px;
+		color: $color-black;
+	}
+
+	.btn {
+		margin-top: 15px;
+	}
+
+	&__image {
+		order: -1;
+
+		img {
+			width: 100%;
+
+			@media (min-width: $sm) {
+				width: 592px;
+			}
+		}
+
+		@media (min-width: $sm) {
+			flex-shrink: 0;
+			order: 0;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: $sm) {
+		flex-wrap: nowrap;
+		margin-bottom: 120px;
+	}
+}

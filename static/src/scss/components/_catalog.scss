@@ -1,0 +1,302 @@
+.catalog {
+	&__filter {
+		margin-bottom: 67px;
+
+		&__row {
+			display: flex;
+			align-items: center;
+		}
+
+		&__btn {
+			display: flex;
+			align-items: center;
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+
+				svg {
+					display: block;
+					flex-shrink: 0;
+					margin-right: 16px;
+					width: 22px;
+					height: 18px;
+				}
+			}
+
+			.btn + .btn {
+				margin-left: 32px;
+			}
+		}
+
+		&__links {
+			display: flex;
+			align-items: center;
+			margin-left: auto;
+
+			a {
+				display: inline-flex;
+				align-items: center;
+
+				svg {
+					display: block;
+					flex-shrink: 0;
+					margin-right: 8px;
+					width: 23px;
+					height: 22px;
+				}
+			}
+
+			a + a {
+				margin-left: 23px;
+			}
+		}
+
+		&__drop {
+			display: none;
+			margin-top: 64px;
+		}
+
+		&__option {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+
+			button {
+				position: relative;
+				border: none;
+				padding: 0 0 0 15px;
+				font-weight: 500;
+				background: transparent;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 7px;
+					width: 9px;
+					height: 1px;
+					background: $color-mine-shaft;
+					transition: $animation-speed;
+				}
+
+				&::after {
+					transform: rotate(90deg);
+				}
+
+				span {
+					padding-left: 5px;
+					font-weight: 300;
+				}
+
+				&.is-active {
+					&::after {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+
+			button + button {
+				margin-left: 48px;
+			}
+
+			.checkbox {
+				margin-left: 48px;
+			}
+
+			.color {
+				margin-left: auto;
+
+				span {
+					padding-right: 11px;
+				}
+
+				label {
+					width: 24px;
+					height: 24px;
+
+					i {
+						&::before {
+							width: 8px;
+							height: 8px;
+						}
+					}
+				}
+
+				label + label {
+					margin-left: 8px;
+				}
+			}
+		}
+
+		&__opt {
+			margin-top: 32px;
+			display: none;
+			align-items: center;
+
+			.radio {
+				margin-right: 40px;
+			}
+
+			.btn {
+				margin-left: 20px;
+			}
+
+			&.is-active {
+				display: flex;
+			}
+		}
+	}
+
+	&__list {
+		margin-bottom: 24px;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -16px;
+	}
+
+	&__col {
+		margin-bottom: 56px;
+		padding: 0 16px;
+		width: 33.33334%;
+	}
+
+	&__item {
+		font-family: $font-family-roboto-condensed;
+		transition: $animation-speed;
+
+		&__image {
+			position: relative;
+			padding-bottom: 79.17%;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 5;
+				height: 8px;
+				width: 100%;
+				background: $color-sun;
+				opacity: 0;
+				visibility: hidden;
+				transition: $animation-speed;
+			}
+
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__action,
+		&__order {
+			position: absolute;
+			left: 32px;
+			top: 32px;
+			border-radius: 12px;
+			padding: 4px 15px;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 16px;
+			background: $color-sun;
+		}
+
+		&__order {
+			background: $color-white;
+		}
+
+		&__content {
+			padding: 32px 34px 28px;
+			background: $color-whisper;
+		}
+
+		&__row {
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+		}
+
+		&__name {
+			display: flex;
+			align-items: center;
+			margin-right: auto;
+
+			span {
+				position: relative;
+				margin-right: 10px;
+				padding-right: 15px;
+				font-weight: 700;
+
+				&::after {
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 50%;
+					border-radius: 50%;
+					width: 4px;
+					height: 4px;
+					background: $color-mine-shaft;
+					transform: translateY(-50%);
+				}
+			}
+		}
+
+		&__hover {
+			display: flex;
+			align-items: center;
+			opacity: 0;
+			visibility: hidden;
+			transition: $animation-speed;
+		}
+
+		&__desc {
+			font-family: $font-family-roboto;
+			margin-right: auto;
+			max-width: 67px;
+			font-size: 12px;
+			line-height: 14px;
+			color: $color-dusty-gray;
+		}
+
+		.color {
+			label {
+				width: 24px;
+				height: 24px;
+
+				i {
+					&::before {
+						width: 8px;
+						height: 8px;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			margin-bottom: -24px;
+
+			.catalog__item__image {
+				&::before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.catalog__item__hover {
+				margin-top: 24px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

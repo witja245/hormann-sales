@@ -1,0 +1,36 @@
+.term {
+	display: flex;
+	margin-bottom: 56px;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		font-size: 18px;
+
+		span {
+			display: block;
+			font-size: 16px;
+			color: $color-rolling-stone;
+		}
+
+		& + & {
+			margin-left: auto;
+
+			@media (min-width: $sm) {
+				margin-left: 100px;
+			}
+		}
+	}
+
+	&.wow {
+		opacity: 0;
+		transform: translateY(35px);
+		transition: 1s;
+		transition-delay: 0.25s;
+
+		&.animated {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

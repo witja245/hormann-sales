@@ -1,0 +1,21 @@
+.page-not-found
+	.container
+		.breadcrumbs
+			ul(itemscope itemtype="http://schema.org/BreadcrumbList")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					a(itemprop="item" href="#")
+						span(itemprop="name") Главная
+					meta(itemprop="position" content="1")
+				li(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					span(itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="/404/")
+						span(itemprop="name") 404
+					meta(itemprop="position" content="2")
+		h2 Страница не найдена
+		.page-not-found-txt
+			p К сожалению, такой страницы не существует. Вероятно был неправильно набран адрес или страница была удалена.
+			a.button.button--md.button--primary(href='#')
+				span.button__text Карта сайта
+
+
+
+
