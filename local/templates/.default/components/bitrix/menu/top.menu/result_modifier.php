@@ -3,14 +3,17 @@
  * @var array $arResult
  * @var array $arParams
  */
+
+
 if ($arResult) {
     if (\CModule::includeModule('iblock')) {
+        $sections = [];
         $req = \CIBlockSection::GetList(
             ['SORT' => 'ASC'],
             [
                 'ACTIVE' => 'Y',
-                'IBLOCK_ID' => IBLOCK_ID_CATALOG,
-                '<DEPTH_LEVEL' => 3,
+                'IBLOCK_ID' => 33,
+                
             ],
             false,
             [
@@ -27,85 +30,42 @@ if ($arResult) {
             ]
         );
         while ($res = $req->GetNext(true, false)) {
-            $res['TEXT'] = $res['NAME'];
-            $res['LINK'] = $res['SECTION_PAGE_URL'];
-            if ($res['DEPTH_LEVEL'] == 1) {
-                $parents[$res['ID']] = $res;
-            } else {
-                $children[] = $res;
-                if ($res['UF_HOME']) {
-                    $forHome[] = $res['ID'];
-                }
-                if ($res['UF_BUSINESS']) {
-                    $forBusiness[] = $res['ID'];
+            $sections[$res['ID']] = $res;
+        }
+        function buildTree($sections)
+        {
+            $tree = [];
+
+            // Сначала создаём плоский массив с указанием родительских разделов
+            foreach ($sections as $id => $section) {
+                $sections[$id]['CHILDREN'] = []; // Инициализируем массив для дочерних разделов
+            }
+
+            // Строим дерево
+            foreach ($sections as $id => $section) {
+                if ($section['IBLOCK_SECTION_ID']) {
+                    // Если у раздела есть родитель, добавляем его в CHILDREN родителя
+                    $sections[$section['IBLOCK_SECTION_ID']]['CHILDREN'][] = &$sections[$id];
+                } else {
+                    // Если это корневой раздел, добавляем его в дерево
+                    $tree[] = &$sections[$id];
                 }
             }
+
+            return $tree;
         }
-        foreach ($children as $child) {
-            if ($parents[$child['IBLOCK_SECTION_ID']]) {
-                if (in_array($child['ID'], $forHome)) {
-                    $parents[$child['IBLOCK_SECTION_ID']]['FOR_HOME'][] = $child;
-                }
-                if (in_array($child['ID'], $forBusiness)) {
-                    $parents[$child['IBLOCK_SECTION_ID']]['FOR_BUSINESS'][] = $child;
-                }
+
+        $treeSectionsMenu = buildTree($sections);
+
+
+        foreach ($arResult as $key => $result){
+            if ($result['PARAMS']['PRODUCTS'] == 'Y'){
+                $arResult[$key]['PARENT'] = $treeSectionsMenu;
             }
         }
-        foreach ($arResult as $key => $value) {
-            foreach ($parents as $parent) {
-                if ($parent['FOR_HOME']) {
-                    if ($value['PARAMS']['LOWER'] == 'FOR_HOME') {
-                        $arResult[$key]['LOWER_ITEMS'][] = $parent;
-                    }
-                }
-                if ($parent['FOR_BUSINESS']) {
-                    if ($value['PARAMS']['LOWER'] == 'FOR_BUSINESS') {
-                        $arResult[$key]['LOWER_ITEMS'][] = $parent;
-                    }
-                }
-            }
-        }
+
+
         $arResult = ['ITEMS' => $arResult];
-        if ($arParams['SETTINGS']) {
-            if ($arParams['SETTINGS']['UF_FOR_HOME_PICTURE']) {
-                $arResult['IMAGES']['FOR_HOME']['SRC'] = \CFile::GetPath($arParams['SETTINGS']['UF_FOR_HOME_PICTURE']);
-            }
-            if ($arParams['SETTINGS']['UF_FOR_BUSINESS_PICTURE']) {
-                $arResult['IMAGES']['FOR_BUSINESS']['SRC'] = \CFile::GetPath($arParams['SETTINGS']['UF_FOR_BUSINESS_PICTURE']);
-            }
-            if ($arParams['SETTINGS']['UF_FOR_HOME_TEXT']) {
-                $arResult['IMAGES']['FOR_HOME']['TEXT'] = $arParams['SETTINGS']['UF_FOR_HOME_TEXT'];
-            }
-            if ($arParams['SETTINGS']['UF_FOR_BUSINESS_TEXT']) {
-                $arResult['IMAGES']['FOR_BUSINESS']['TEXT'] = $arParams['SETTINGS']['UF_FOR_BUSINESS_TEXT'];
-            }
-            if ($arParams['SETTINGS']['UF_FOR_HOME_RECS']) {
-                $req = \CIBlockElement::GetList(
-                    ['SORT' => 'ASC',],
-                    ['IBLOCK_ID' => IBLOCK_ID_CATALOG, 'ACTIVE' => 'Y', 'ID' => $arParams['SETTINGS']['UF_FOR_HOME_RECS']]
-                );
-                while ($res = $req->GetNextElement()) {
-                    $element = $res->GetFields();
-                    $forHomeRecs[] = [
-                        'TEXT' => $element['NAME'],
-                        'LINK' => $element['DETAIL_PAGE_URL'],
-                    ];
-                }
-            }
-            if ($arParams['SETTINGS']['UF_FOR_BUSINESS_RECS']) {
-                $req = \CIBlockElement::GetList(
-                    ['SORT' => 'ASC',],
-                    ['IBLOCK_ID' => IBLOCK_ID_CATALOG, 'ACTIVE' => 'Y', 'ID' => $arParams['SETTINGS']['UF_FOR_BUSINESS_RECS']]
-                );
-                while ($res = $req->GetNextElement()) {
-                    $element = $res->GetFields();
-                    $forBusinessRecs[] = [
-                        'TEXT' => $element['NAME'],
-                        'LINK' => $element['DETAIL_PAGE_URL'],
-                    ];
-                }
-            }
-            $arResult['RECS'] = ['FOR_BUSINESS' => $forBusinessRecs, 'FOR_HOME' => $forHomeRecs];
-        }
+
     }
 }

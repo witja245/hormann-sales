@@ -1,4 +1,5 @@
 <?php
+define('DEFAULT_TEMPLATE_MAIN_PATH','/local/templates/hormannSales');
 define('IBLOCK_ID_PAGES', 3); //Страницы
 define('IBLOCK_ID_MAIN_SLIDER', 4); //Слайдер на главной
 define('IBLOCK_ID_ADVICE', 5); //Советы
