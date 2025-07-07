@@ -8,6 +8,7 @@ namespace classes;
 if(!defined('ALLCORP3_MODULE_ID'))
 	define('ALLCORP3_MODULE_ID', 'aspro.allcorp3');
 
+use classes\functions\CAsproAllcorp3;
 use Bitrix\Main\Config\Option;
 use Bitrix\Main\IO\File;
 use Bitrix\Main\Loader;
@@ -198,12 +199,12 @@ class CAllcorp3{
 
 	public static function getMenuChildsExt($arParams, &$aMenuLinksExt, $bMenu = false)
 	{
-		if ($handler = \Aspro\Functions\CAsproAllcorp3::getCustomFunc(__FUNCTION__)) {
+		if ($handler = CAsproAllcorp3::getCustomFunc(__FUNCTION__)) {
 			call_user_func_array($handler, [$arParams, &$aMenuLinksExt, $bMenu]);
 			return;
 		}
 
-		$catalog_id = \Bitrix\Main\Config\Option::get('aspro.allcorp3', 'CATALOG_IBLOCK_ID', CAllcorp3Cache::$arIBlocks[SITE_ID]['aspro_allcorp3_catalog']['aspro_allcorp3_catalog'][0]);
+		$catalog_id = 33;
 		$bIsCatalog = $arParams['IBLOCK_ID'] == $catalog_id;
 
 		$arParams['CATALOG_IBLOCK_ID'] = $catalog_id;
@@ -341,7 +342,7 @@ class CAllcorp3{
 		$arMegaLinks = $arMegaItems = array();
 
 		$menuIblockId = CAllcorp3Cache::$arIBlocks[SITE_ID]['aspro_allcorp3_catalog']['aspro_allcorp3_megamenu'][0];
-        tl($menuIblockId, '$menuIblockId');
+
 
 		if($menuIblockId){
 
@@ -6340,6 +6341,7 @@ class CAllcorp3{
 		if(strlen($dir))
 		{
 			$file = str_replace('//', '/', $dir.'/.section.php');
+            tl($file, '$file');
 			if(file_exists($file)){
 				@include($file);
 				return $arDirProperties;
@@ -7356,7 +7358,7 @@ class CAllcorp3{
 	}
 
 	public static function showRightDok(){
-		if ($handler = \Aspro\Functions\CAsproAllcorp3::getCustomFunc(__FUNCTION__)) {
+		if ($handler = \classes\functions\CAsproAllcorp3::getCustomFunc(__FUNCTION__)) {
 			return call_user_func_array($handler, []);
 		}
 

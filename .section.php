@@ -1,4 +1,7 @@
 <?
 $sSectionName = "Главная";
-$arDirProperties = array();
+$arDirProperties = Array(
+    "description" => "Корпоративный сайт",
+    "MENU" => "N"
+);
 ?>

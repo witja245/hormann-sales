@@ -186,7 +186,7 @@ if(!class_exists('CAllcorp3Cache')){
 			if(defined('SITE_ID'))
 				$siteID = SITE_ID;
 
-			$obCache = new CPHPCache();
+			$obCache = new \CPHPCache();
 			$cacheID = __FUNCTION__."_".$cacheTag.md5(serialize(array_merge((array)$arOrder, (array)$siteID, (array)$arFilter, (array)$bIncCnt, (array)$arNavStartParams, (array)$arSelectFields)));
 			if(self::$bEnabled && $obCache->InitCache($cacheTime, $cacheID, $cachePath)){
 				$res = $obCache->GetVars();
@@ -198,7 +198,7 @@ if(!class_exists('CAllcorp3Cache')){
 				$urlTemplate = $arOrder["CACHE"]["URL_TEMPLATE"];
 				unset($arOrder["CACHE"]);
 
-				$dbRes = CIBlockSection::GetList($arOrder, $arFilter, $bIncCnt, $arSelectFields, $arNavStartParams);
+				$dbRes = \CIBlockSection::GetList($arOrder, $arFilter, $bIncCnt, $arSelectFields, $arNavStartParams);
 
 				if(strlen($urlTemplate)){
 					$dbRes->SetUrlTemplates('', $urlTemplate);
@@ -556,7 +556,7 @@ if(!class_exists('CAllcorp3Cache')){
 		}
 
 		private static function _InitCacheParams($moduleName, $functionName, $arCache){
-			CModule::IncludeModule($moduleName);
+
 			$cacheTag = $arCache["TAG"];
 			$cachePath = $arCache["PATH"];
 			$cacheTime = ($arCache["TIME"] > 0 ? $arCache["TIME"] : 36000000);
