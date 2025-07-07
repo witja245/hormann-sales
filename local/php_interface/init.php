@@ -1,5 +1,6 @@
 <?php
-
+use Bitrix\Main\Diag;
+use Psr\Log\logLevel;
 require 'define.php';
 
 require 'events.php';
@@ -85,3 +86,4 @@ function my_onBeforeResultAdd($WEB_FORM_ID, &$arFields, &$arrVALUES)
 }
 
 AddEventHandler('form', 'onBeforeResultAdd', 'my_onBeforeResultAdd');
+

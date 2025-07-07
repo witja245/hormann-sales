@@ -1,30 +1,18 @@
 <?
-if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
-
-$aMenuLinksExt = array();
-$arMenuParametrs = [
-    "MENU"=>"Y",
-    "MENU_SHOW_ELEMENTS"=>"N",
-    "MENU_SHOW_SECTIONS"=>"Y"
-]
-if($arMenuParametrs)
-{
-    $iblock_id = 33;
-    $arExtParams = array(
-        'IBLOCK_ID' => $iblock_id,
-        'MENU_PARAMS' => $arMenuParametrs,
-        'SECTION_FILTER' => array('UF_MENU_HIDDEN' => false),	// custom filter for sections (through array_merge)
-        'SECTION_SELECT' => array(),	// custom select for sections (through array_merge)
-        'ELEMENT_FILTER' => array(),	// custom filter for elements (through array_merge)
-        'ELEMENT_SELECT' => array(),	// custom select for elements (through array_merge)
-        'MENU_TYPE' => 'catalog',
-    );
-
-    CAllcorp3::getMenuChildsExt($arExtParams, $aMenuLinksExt);
-}
-
-
-
-$aMenuLinks = array_merge($aMenuLinks, $aMenuLinksExt);
-
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+global $APPLICATION;
+$aMenuLinksExt=$APPLICATION->IncludeComponent("bitrix:menu.sections", "", array(
+    "IS_SEF" => "Y",
+    "SEF_BASE_URL" => "/products/",
+    "SECTION_PAGE_URL" => "#SECTION_CODE_PATH#/",
+    "DETAIL_PAGE_URL" => "#SECTION_ID#/#ELEMENT_ID#/",
+    "IBLOCK_TYPE" => "Catalog",
+    "IBLOCK_ID" => "33",
+    "DEPTH_LEVEL" => "3",
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "36000000"
+),
+    false
+);
+$aMenuLinks = array_merge($aMenuLinksExt, $aMenuLinks);
 ?>
