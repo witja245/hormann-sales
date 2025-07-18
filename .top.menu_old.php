@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Продукция", 
-		"products/", 
+		"products/",
 		Array(), 
 		Array('PRODUCTS'=> 'Y'),
 		"" 

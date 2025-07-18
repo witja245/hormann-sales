@@ -2,42 +2,42 @@
 $aMenuLinks = Array(
 	Array(
 		"Гаражные ворота", 
-		"/products/garazhnye-vorota/", 
+		"/products/garazhnye-vorota/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Входные двери", 
-		"/products/vkhodnye-dveri/", 
+		"/products/vkhodnye-dveri/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Автоматика для ворот", 
-		"/products/avtomatika-dlya-vorot/", 
+		"/products/avtomatika-dlya-vorot/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Промышленные ворота", 
-		"/products/promyshlennye-vorota/", 
+		"/products/promyshlennye-vorota/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Перегрузочное оборудование", 
-		"/products/peregruzochnoe-oborudovanie/", 
+		"/products/peregruzochnoe-oborudovanie/",
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Система контроля въезда", 
-		"/products/sistemy-kontrolya-vezda/", 
+		"/products/sistemy-kontrolya-vezda/",
 		Array(), 
 		Array(), 
 		"" 

@@ -190,7 +190,7 @@ $page = \Itech\PageService::getInstance()->get('/products/');
         <div class="catalogue wow" data-wow-offset="200">
             <!--            --><? //$APPLICATION->IncludeComponent(
             //                "bitrix:catalog.smart.filter",
-            ////                "products",
+            ////                "productsNew",
             //                "",
             //                array(
             //                    "COMPONENT_TEMPLATE" => ".default",
