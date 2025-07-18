@@ -52,7 +52,7 @@ class Sitemap {
 				'priority' => $prioritySection,
 			];
 		}
-		/* products */
+		/* productsNew */
 		$productsSection = CIBlockSection::GetList(
 			["SORT" => "ASC"],
 			[
@@ -94,7 +94,7 @@ class Sitemap {
 				];
 			}
 		}
-		/* /products */
+		/* /productsNew */
 
 		/* share */
 		$shareElements = CIBlockElement::GetList(

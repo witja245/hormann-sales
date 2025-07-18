@@ -53,7 +53,7 @@
                                     <?php endforeach; ?>
                                 </div>
                             <?php else: ?>
-                                <a href="" class="dropdown_title"><?= $childs['TEXT'] ?></a>
+                                <a href="<?= $childs['LINK'] ?>" class="dropdown_title"><?= $childs['TEXT'] ?></a>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>

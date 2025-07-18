@@ -656,7 +656,7 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
                         <?
                     }
 
-                    CBitrixComponent::includeComponentClass('bitrix:sale.products.gift');
+                    CBitrixComponent::includeComponentClass('bitrix:sale.productsNew.gift');
                     $APPLICATION->IncludeComponent(
                         'bitrix:sale.products.gift',
                         '.default',
