@@ -1,0 +1,40 @@
+<? 
+namespace Aspro\Allcorp3\Functions;
+class Extensions extends \CAllcorp3{
+    public static function register(){
+		$arJSCoreConfig = [
+			'item_action' => [
+				'js' => SITE_TEMPLATE_PATH.'/js/item-action.js',
+			],
+			'swiper_init' => [
+				'js' => SITE_TEMPLATE_PATH.'/js/slider.swiper.min.js',
+			],
+			'swiper' => [
+				'js' => SITE_TEMPLATE_PATH.'/vendor/js/carousel/swiper/swiper-bundle.min.js',
+				'css' => [
+					SITE_TEMPLATE_PATH.'/vendor/css/carousel/swiper/swiper-bundle.min.css',
+					SITE_TEMPLATE_PATH.'/css/slider.swiper.min.css'
+				],
+				'rel' => [self::partnerName.'_swiper_init'],
+			],
+		];
+
+		foreach ($arJSCoreConfig as $ext => $arExt) {
+			\CJSCore::RegisterExt(self::partnerName.'_'.$ext, array_merge($arExt, ['skip_core' => true]));
+		}
+	}
+
+	public static function init($arExtensions){
+		$arExtensions = is_array($arExtensions) ? $arExtensions : (array)$arExtensions;
+
+		if($arExtensions){
+            
+			$arExtensions = array_map(function($ext){
+				return strpos($ext, self::partnerName) !== false ? $ext : self::partnerName.'_'.$ext;
+			}, $arExtensions);
+
+			\CJSCore::Init($arExtensions);
+		}
+	}
+}
+?>
