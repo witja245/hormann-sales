@@ -52,12 +52,13 @@ $arFileTmp = CFile::ResizeImageGet(
     false
 );
 
-if ($arCurSection['UF_LEND']) {
-    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_lend.php");
-//} elseif ($arCurSection['UF_WITHOUT_LISTING']) {
-//    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_without_listing.php");
-} elseif ($arCurSection['UF_ARTICLE']) {
-    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_article.php");
-} else {
-    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_common.php");
-}
+include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_common.php");
+//if ($arCurSection['UF_LEND']) {
+//    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_lend.php");
+////} elseif ($arCurSection['UF_WITHOUT_LISTING']) {
+////    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_without_listing.php");
+//} elseif ($arCurSection['UF_ARTICLE']) {
+//    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_article.php");
+//} else {
+//    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_common.php");
+//}

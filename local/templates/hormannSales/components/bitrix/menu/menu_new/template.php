@@ -1,15 +1,13 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
-<? $this->setFrameMode(true); ?>
-<?php
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<?php $this->setFrameMode(true); ?>
 
-?>
-<? if ($arResult) : ?>
+<?php if ($arResult) : ?>
 
     <ul class="menu">
         <?php foreach ($arResult as $item) : ?>
             <?php if (!empty($item['CHILD'])): ?>
                 <li>
-                    <a href="<?php if($item['PARAMS']['SHOW_LINKS'] != 'N'): echo $item['LINK']; endif;?>"><?= $item['TEXT'] ?></a>
+                    <a href="<?php if($item['PARAMS']['SHOW_LINKS'] != 'N'): echo $item['LINK']; else: echo 'javascript:void(0);'; endif;?>"><?= $item['TEXT'] ?></a>
                     <?php if (!empty($item['CHILD']['0']['CHILD'])): ?>
                         <div class="menu_mobile-links">
                             <?php foreach ($item['CHILD'] as $childsMobile): ?>
@@ -32,7 +30,7 @@
 
                                         <?php if (!empty($subChild['CHILD'])): ?>
                                             <div class="dropdown_subtitle">
-                                                <?= $subChild['TEXT'] ?>
+                                               <a href="<?= $subChild['LINK'] ?>"><?= $subChild['TEXT'] ?></a>
                                                 <img src="<?= DEFAULT_TEMPLATE_MAIN_PATH ?>/img/menu_arrow.svg" alt="">
                                                 <ul class="dropdown_menu">
                                                     <?php foreach ($subChild['CHILD'] as $subSubChild): ?>

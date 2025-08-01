@@ -267,55 +267,44 @@
 
 
 
-<div id="popup_zamer" class="popup_zamer" style="display: none;">
-    <div class="popup_call-img">
-        <picture>
-            <source srcset="<?= DEFAULT_TEMPLATE_MAIN_PATH ?>/img/popup_zamer-img2.png" media="(max-width: 767px)">
-            <img src="<?= DEFAULT_TEMPLATE_MAIN_PATH ?>/img/popup_zamer-img.png" alt="">
-        </picture>
-
-    </div>
-    <div class="popup_info">
-        <div class="popup_title">Записаться на замер</div>
-        <div class="popup_text">Заполните форму, наш менеджер перезвонит вам <br> и уточнит детали для вызова
-            замерщика
-        </div>
-        <div class="popup_form">
-            <input type="text" name="" id="" class="popup_inp" placeholder="Ваше имя">
-            <input type="tel" name="" id="" class="popup_inp" placeholder="Номер телефона">
-            <button class="btn_popup btn">Записаться на замер</button>
-            <div class="popup_ok"><input type="checkbox" checked> Нажимая кнопку, Вы автоматически соглашаетесь с
-                условиями <a href="">Политики
-                    конфиденциальности</a> и обработкой данных
-            </div>
-        </div>
-    </div>
-</div>
+<? $APPLICATION->IncludeComponent("bitrix:form.result.new",
+    "zapis_zamer",
+    Array(
+        "SEF_MODE" => "N",
+        "WEB_FORM_ID" => 11,
+        "LIST_URL" => "",
+        "EDIT_URL" => "",
+        "SUCCESS_URL" => "/spasibo/index.php",
+        "CHAIN_ITEM_TEXT" => "",
+        "CHAIN_ITEM_LINK" => "",
+        "IGNORE_CUSTOM_TEMPLATE" => "Y",
+        "USE_EXTENDED_ERRORS" => "Y",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "SEF_FOLDER" => "/",
+        "VARIABLE_ALIASES" => Array('WEB_FORM_ID', 'RESULT_ID')
+    )
+); ?>
 
 
-<div id="popup_consult" class="popup_zamer" style="display: none;">
-    <div class="popup_call-img">
-        <picture>
-            <source srcset="<?= DEFAULT_TEMPLATE_MAIN_PATH ?>/img/popup_zamer-img4.png" media="(max-width: 767px)">
-            <img src="<?= DEFAULT_TEMPLATE_MAIN_PATH ?>/img/popup_zamer-img3.png" alt="">
-        </picture>
-
-    </div>
-    <div class="popup_info">
-        <div class="popup_title">Получить консультацию <br> эксперта</div>
-        <div class="popup_text">Заполните форму, наш специалист перезвонит <br> вам и ответит на все вопросы</div>
-        <div class="popup_form">
-            <input type="text" name="" id="" class="popup_inp" placeholder="Ваше имя">
-            <input type="tel" name="" id="" class="popup_inp" placeholder="Номер телефона">
-            <textarea name="" id="" class="popup_area" placeholder="Напишите ваши вопросы"></textarea>
-            <button class="btn_popup btn">Отправить</button>
-            <div class="popup_ok"><input type="checkbox" checked> Нажимая кнопку, Вы автоматически соглашаетесь с
-                условиями <a href="">Политики
-                    конфиденциальности</a> и обработкой данных
-            </div>
-        </div>
-    </div>
-</div>
+<? $APPLICATION->IncludeComponent("bitrix:form.result.new",
+    "expert_advice",
+    Array(
+        "SEF_MODE" => "N",
+        "WEB_FORM_ID" => 12,
+        "LIST_URL" => "",
+        "EDIT_URL" => "",
+        "SUCCESS_URL" => "/spasibo/index.php",
+        "CHAIN_ITEM_TEXT" => "",
+        "CHAIN_ITEM_LINK" => "",
+        "IGNORE_CUSTOM_TEMPLATE" => "Y",
+        "USE_EXTENDED_ERRORS" => "Y",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "3600",
+        "SEF_FOLDER" => "/",
+        "VARIABLE_ALIASES" => Array('WEB_FORM_ID', 'RESULT_ID')
+    )
+); ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="/static/build/js/vendor.js?v=1637848494197"></script>

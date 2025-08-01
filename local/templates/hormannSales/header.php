@@ -8,6 +8,25 @@ $topMenuSettings = [
     'UF_FOR_HOME_RECS' => \COption::GetOptionString("askaron.settings", "UF_FOR_HOME_RECS"),
     'UF_FOR_BUSINESS_RECS' => \COption::GetOptionString("askaron.settings", "UF_FOR_BUSINESS_RECS"),
 ];
+$page = $APPLICATION->GetCurPage();
+
+
+$pageArr = explode('/', $page);
+
+$headerClass = '';
+if ($pageArr['1'] == ''){
+    $headerClass = 'header_opacity';
+}
+if ($pageArr['1'] == 'about'){
+    $headerClass = 'header_opacity';
+}
+if ($pageArr['2'] == 'service'){
+    $headerClass = 'header_opacity';
+}
+if ($pageArr['1'] == 'architect'){
+    $headerClass = 'header_opacity';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -302,7 +321,7 @@ $topMenuSettings = [
 <div id="scroll_trigger" class="scroll_trigger"></div>
 <a href="#scroll_trigger" class="scroll"></a>
 
-<header class="header">
+<header class="header <?=$headerClass?>">
     <div class="header_top">
         <div class="container">
             <div class="header_top-wrapper">
